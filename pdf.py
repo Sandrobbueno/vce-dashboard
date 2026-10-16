@@ -8,7 +8,8 @@ BASE = pathlib.Path(__file__).parent
 cfg = json.loads((BASE / 'config.json').read_text(encoding='utf-8'))
 date = sys.argv[1] if len(sys.argv) > 1 else sorted(p.name for p in (BASE / 'out').iterdir())[-1]
 files = [f for f in glob.glob(str(BASE / 'out' / date / '*.html')) if not f.endswith('_email.html')]
-PDFS = BASE.parent / '04_PDFs_Semanais'; PDFS.mkdir(exist_ok=True)
+# no repositório (raiz com .github) os PDFs ficam em ./04_PDFs_Semanais; na pasta 03_Dashboard do Dropbox, em ../04_PDFs_Semanais
+PDFS = (BASE if (BASE / '.github').exists() else BASE.parent) / '04_PDFs_Semanais'; PDFS.mkdir(exist_ok=True)
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page()
     for f in files:
