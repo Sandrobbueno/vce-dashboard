@@ -93,7 +93,12 @@ for p in cfg['roster']:
 
 # extras: na plataforma, nas trilhas, fora do roster e fora dos domínios excluídos
 roster_emails = {p['email'].lower() for p in cfg['roster']}
-extras = [r for r in cur['rows'] if r['em'].lower() not in roster_emails and r['em'].split('@')[-1] not in EXCL]
+# extras relevantes: fora do roster, mas de um dos dealers configurados e cadastrados a partir do início da turma
+# (as turmas de 2025 de outros dealers ficam de fora: não são objeto deste acompanhamento)
+dealer_units = {d['nome'].lower() for d in DEALERS.values()}
+dealer_doms = {dom for d in DEALERS.values() for dom in d['dominios']}
+extras = [r for r in cur['rows'] if r['em'].lower() not in roster_emails and r['em'].split('@')[-1] not in EXCL
+          and (r['u'].lower() in dealer_units or r['em'].split('@')[-1] in dealer_doms) and (r.get('cad') or '') >= INICIO[:7]]
 
 # ---------- agregados ----------
 def resumo(rows_p):
