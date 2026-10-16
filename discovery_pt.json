@@ -1,0 +1,2253 @@
+{
+ "escola": "Lean Dealers Academy",
+ "n_students": 130,
+ "courses": [
+  [
+   21427,
+   "Liderança Lean",
+   "Liderança",
+   44
+  ],
+  [
+   22781,
+   "Origens e Definições",
+   "Fundamentos do Pensamento Lean",
+   47
+  ],
+  [
+   22782,
+   "Valor",
+   "Valor",
+   24
+  ],
+  [
+   22783,
+   "Respeito pelo indivíduo",
+   "Especialistas",
+   0
+  ],
+  [
+   22784,
+   "Propósito",
+   "Fundamentos do Pensamento Lean",
+   35
+  ],
+  [
+   22785,
+   "Padrões - A base da qualidade",
+   "Especialistas",
+   0
+  ],
+  [
+   22786,
+   "Os 5 esses",
+   "Ferramentas Lean",
+   18
+  ],
+  [
+   22787,
+   "Os 5 Princípios do Pensamento Lean",
+   "Fundamentos do Pensamento Lean",
+   42
+  ],
+  [
+   22788,
+   "Os 4 Tipos de Problema",
+   "Especialistas",
+   0
+  ],
+  [
+   22789,
+   "Medindo Performance",
+   "Especialistas",
+   0
+  ],
+  [
+   22790,
+   "Lean e os Desperdícios",
+   "Fundamentos do Pensamento Lean",
+   36
+  ],
+  [
+   22791,
+   "Kata de Melhoria",
+   "Melhoria Contínua",
+   11
+  ],
+  [
+   22792,
+   "Gestão da Mudança",
+   "Especialistas",
+   0
+  ],
+  [
+   22793,
+   "Gerenciamento de Tempo",
+   "Especialistas",
+   0
+  ],
+  [
+   22794,
+   "Gemba",
+   "Ferramentas Lean",
+   19
+  ],
+  [
+   22795,
+   "Ferramentas de Gestão e Qualidade: Como Transformar Dados em Decisões Inteligentes",
+   "Ferramentas Lean",
+   19
+  ],
+  [
+   22797,
+   "Capacitando Pessoas",
+   "Especialistas",
+   0
+  ],
+  [
+   24172,
+   "Dominando o Kanban: Eficiência e Produtividade",
+   "Ferramentas Lean",
+   18
+  ],
+  [
+   24513,
+   "OKRs na Prática",
+   "Melhoria Contínua",
+   14
+  ],
+  [
+   24514,
+   "MASP – Método de Análise e Solução de Problemas",
+   "Melhoria Contínua",
+   12
+  ],
+  [
+   24798,
+   "5 esses",
+   "Ferramentas Lean",
+   18
+  ],
+  [
+   25309,
+   "Gestão Moderna e Contemporânea",
+   "Liderança",
+   2
+  ],
+  [
+   25991,
+   "Levantando Problemas",
+   "Melhoria Contínua",
+   15
+  ],
+  [
+   31201,
+   "Gestão da Mudança",
+   "Gestão",
+   0
+  ]
+ ],
+ "units": [
+  [
+   2285,
+   "Dinâmica Equipamentos"
+  ],
+  [
+   2286,
+   "Linck Máquinas"
+  ],
+  [
+   2287,
+   "Nors"
+  ],
+  [
+   2288,
+   "Volvo CE"
+  ],
+  [
+   2289,
+   "LeanDealers"
+  ],
+  [
+   2313,
+   "Gotemburgo"
+  ],
+  [
+   2314,
+   "Tracbel"
+  ],
+  [
+   2354,
+   "Bravo Log"
+  ],
+  [
+   2376,
+   "Lean Dealers Academy"
+  ],
+  [
+   2689,
+   "Potiguar"
+  ],
+  [
+   3049,
+   "Solnascente"
+  ],
+  [
+   3114,
+   "VMI"
+  ]
+ ],
+ "departments": [
+  [
+   1799,
+   "VCE"
+  ],
+  [
+   2217,
+   "Especialistas Lean"
+  ],
+  [
+   3624,
+   "GEPPP"
+  ]
+ ],
+ "roles": [
+  [
+   4478,
+   "Especialistas Lean"
+  ],
+  [
+   4479,
+   "Liderança Lean"
+  ],
+  [
+   4480,
+   "Dealer Development Representative"
+  ],
+  [
+   4692,
+   "Avulso"
+  ],
+  [
+   11093,
+   "Lean"
+  ]
+ ],
+ "trails_seen": {
+  "1311": "Especialistas Lean 2026",
+  "518": "Fundamentos do Pensamento Lean",
+  "591": "Especialistas Lean"
+ },
+ "by_unit_role": {
+  "LeanDealers | Avulso": 2,
+  "- | -": 1,
+  "Dinâmica Equipamentos | Especialistas Lean": 6,
+  "Linck Máquinas | Especialistas Lean": 2,
+  "Nors | Especialistas Lean": 21,
+  "Volvo CE | Especialistas Lean": 17,
+  "LeanDealers | Especialistas Lean": 1,
+  "Volvo CE | Liderança Lean": 7,
+  "Gotemburgo | Liderança Lean": 11,
+  "Tracbel | Liderança Lean": 8,
+  "Gotemburgo | Avulso": 1,
+  "Bravo Log | -": 3,
+  "Potiguar | -": 1,
+  "Lean Dealers Academy | Especialistas Lean": 1,
+  "Potiguar | Especialistas Lean": 2,
+  "Solnascente | -": 7,
+  "Gotemburgo | Especialistas Lean": 10,
+  "Tracbel | Especialistas Lean": 14,
+  "Dinâmica Equipamentos | Liderança Lean": 6,
+  "Nors | Liderança Lean": 6,
+  "VMI | Lean": 3
+ },
+ "students": [
+  {
+   "code": "",
+   "n": "Sandro Beda Bueno",
+   "em": "sandrobadnanas@hotmail.com",
+   "cad": "2024-08-05",
+   "l": "2025-11-07",
+   "u": "LeanDealers",
+   "r": "Avulso",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    21427,
+    22790,
+    22794,
+    22784,
+    22786,
+    22782,
+    24172,
+    22795,
+    24798,
+    25309
+   ]
+  },
+  {
+   "code": "Aln0001",
+   "n": "Nei Santa Barbara",
+   "em": "curaudinei@gmail.com",
+   "cad": "2024-10-03",
+   "l": "2026-08-03",
+   "u": "LeanDealers",
+   "r": "Avulso",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22795,
+    24798,
+    22782,
+    24514,
+    22791,
+    24172
+   ]
+  },
+  {
+   "code": "all0001",
+   "n": "Sandro Bueno",
+   "em": "sandrob.bueno@me.com",
+   "cad": "2024-10-17",
+   "l": "2025-05-15",
+   "u": "",
+   "r": "",
+   "t": [],
+   "enr": [
+    21427,
+    22794
+   ]
+  },
+  {
+   "code": "ESPLEAN01",
+   "n": "Adriana Aquino",
+   "em": "rh@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2025-04-22",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": []
+  },
+  {
+   "code": "ESPLEAN02",
+   "n": "Dilvane Cardoso",
+   "em": "dilvane@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2026-02-02",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22782,
+    22787,
+    22790,
+    22784,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN04",
+   "n": "Eduardo Bernaldino Carlos",
+   "em": "gestaoestoque@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2026-10-16",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791,
+    25309
+   ]
+  },
+  {
+   "code": "ESPLEAN07",
+   "n": "Julia Rolim",
+   "em": "juliarolim@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2025-04-28",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781
+   ]
+  },
+  {
+   "code": "ESPLEAN08",
+   "n": "Luiz Vanderlei",
+   "em": "vanderlei@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2025-05-19",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781
+   ]
+  },
+  {
+   "code": "ESPLEAN09",
+   "n": "Rafaela Fleming",
+   "em": "suportepecas2@dinamicaequip.com.br",
+   "cad": "2025-03-24",
+   "l": "2026-05-30",
+   "u": "Dinâmica Equipamentos",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782
+   ]
+  },
+  {
+   "code": "ESPLEAN13",
+   "n": "Leonardo Oliveira da Silva",
+   "em": "leonardo.silva@linckmaquinas.com.br",
+   "cad": "2025-03-24",
+   "l": "2025-04-25",
+   "u": "Linck Máquinas",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "ESPLEAN14",
+   "n": "Lucas Mierlicki Ferraz",
+   "em": "lucas.ferraz@linckmaquinas.com.br",
+   "cad": "2025-03-24",
+   "l": "2025-07-28",
+   "u": "Linck Máquinas",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "ESPLEAN15",
+   "n": "Gabriel Ximenes",
+   "em": "gximenes@nors.com",
+   "cad": "2025-03-24",
+   "l": "2026-06-12",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514
+   ]
+  },
+  {
+   "code": "ESPLEAN16",
+   "n": "Luiz Henrique Martins Pozniak",
+   "em": "lmartins@nors.com",
+   "cad": "2025-03-24",
+   "l": "2026-10-16",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791,
+    21427
+   ]
+  },
+  {
+   "code": "ESPLEAN17",
+   "n": "Luiz Toledo",
+   "em": "ltoledo@nors.com",
+   "cad": "2025-03-24",
+   "l": "2026-02-11",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN19",
+   "n": "Ilza Vieira",
+   "em": "ilza.vieira@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-07-13",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795
+   ]
+  },
+  {
+   "code": "ESPLEAN20",
+   "n": "Josué Ebone",
+   "em": "josue.ebone@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-08-18",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787
+   ]
+  },
+  {
+   "code": "ESPLEAN21",
+   "n": "Julio Oliveira",
+   "em": "julio.oliveira@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-04-02",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": []
+  },
+  {
+   "code": "ESPLEAN23",
+   "n": "Leonardo Oliveira",
+   "em": "leonardo.oliveira.3@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-11-13",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "ESPLEAN24",
+   "n": "Marina Angelicio",
+   "em": "marina.angelicio@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-12-22",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22786,
+    22782,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN25",
+   "n": "Ricardo Yanagui",
+   "em": "ricardo.yanagui@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2026-01-26",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN26",
+   "n": "Taylana Pereira",
+   "em": "taylana.pereira@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2026-01-29",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN27",
+   "n": "Thais Golunski",
+   "em": "thais.golunski@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-12-02",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22782,
+    22781,
+    22787,
+    22790,
+    22784,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN28",
+   "n": "Yuri Gerhardt",
+   "em": "yuri.gerhardt@volvo.com",
+   "cad": "2025-03-24",
+   "l": "2025-06-13",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787
+   ]
+  },
+  {
+   "code": "ESPLEAN29",
+   "n": "Sandro Beda",
+   "em": "sandro.bedabueno@gmail.com",
+   "cad": "2025-03-24",
+   "l": "2025-05-15",
+   "u": "LeanDealers",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    21427
+   ]
+  },
+  {
+   "code": "ESPLEAN30",
+   "n": "Sadi Liebl",
+   "em": "sadi.liebl@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2026-07-22",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513
+   ]
+  },
+  {
+   "code": "ESPLEAN31",
+   "n": "Christian Machado",
+   "em": "christian.machado@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2025-06-05",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794
+   ]
+  },
+  {
+   "code": "ESPLEAN32",
+   "n": "Anelisa Merlin",
+   "em": "anelisa.merlin@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2025-08-11",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782
+   ]
+  },
+  {
+   "code": "ESPLEAN33",
+   "n": "Tatiane Bora",
+   "em": "tatiane.bora.2@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2025-12-18",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991
+   ]
+  },
+  {
+   "code": "ESPLEAN34",
+   "n": "Roberta Ferreira",
+   "em": "roberta.ferreira@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2026-01-22",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN35",
+   "n": "Patricia Gavloski",
+   "em": "patricia.gavloski@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2025-10-16",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513
+   ]
+  },
+  {
+   "code": "ESPLEAN36",
+   "n": "Guilherme Fernandes",
+   "em": "guilherme.fernandes@volvo.com",
+   "cad": "2025-04-01",
+   "l": "2025-12-18",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513,
+    24514,
+    22791
+   ]
+  },
+  {
+   "code": "ESPLEAN36",
+   "n": "Maria Teresa Souza",
+   "em": "maria.teresa.souza@volvo.com",
+   "cad": "2025-04-23",
+   "l": "2025-12-12",
+   "u": "Volvo CE",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    22781,
+    22787,
+    22787,
+    22790,
+    22784,
+    22782,
+    22786,
+    22794,
+    24172,
+    22795,
+    25991,
+    24513
+   ]
+  },
+  {
+   "code": "LIDLEAN002",
+   "n": "Cristiane Walbach de Assis",
+   "em": "cristiane.assis@volvo.com",
+   "cad": "2025-05-05",
+   "l": "2025-05-27",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781
+   ]
+  },
+  {
+   "code": "LIDLEAN003",
+   "n": "Marcelo Mendes Magalhães",
+   "em": "marcelo.magalhaes@volvo.com",
+   "cad": "2025-05-05",
+   "l": "2025-05-13",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781
+   ]
+  },
+  {
+   "code": "LIDLEAN004",
+   "n": "Jefferson",
+   "em": "jefferson.kohler@volvo.com",
+   "cad": "2025-05-05",
+   "l": "2025-08-08",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN005",
+   "n": "Eliane Santos",
+   "em": "eliane.santos@volvo.com",
+   "cad": "2025-05-05",
+   "l": "2025-05-25",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787
+   ]
+  },
+  {
+   "code": "LIDLEAN006",
+   "n": "Raphael Lima",
+   "em": "raphael.lima@volvo.com",
+   "cad": "2025-05-05",
+   "l": "2025-12-18",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787
+   ]
+  },
+  {
+   "code": "LIDLEAN009",
+   "n": "Jorge Silva",
+   "em": "jorge.silva@linckmaquinas.com.br",
+   "cad": "2025-05-05",
+   "l": "2026-10-14",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN011",
+   "n": "ECLESON CARVALHO DA SILVA",
+   "em": "ecleson.silva@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-10-13",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790
+   ]
+  },
+  {
+   "code": "LIDLEAN012",
+   "n": "IVONE MARIA TIMM ANDRIGHETO",
+   "em": "ivone.timm@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-08-19",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LIDLEAN014",
+   "n": "MARCELO GOMES DA SILVA",
+   "em": "marcelo.gomes@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2026-01-12",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN015",
+   "n": "OSMARIO LAUREANO CELESTINO DE SOUZA",
+   "em": "osmario.laureano@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-11-25",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN016",
+   "n": "RAFFAEL FELIPE DOS SANTOS",
+   "em": "raffael.santos@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-11-19",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN017",
+   "n": "TIAGO SALVADOR DA SILVA",
+   "em": "tiago.salvador@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2026-07-29",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN018",
+   "n": "WELLINGTON PEREIRA SANTOS",
+   "em": "wellington.santos@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-12-10",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN019",
+   "n": "ZEZITO BISPO",
+   "em": "zezito.bispo@gotemburgo.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-08-19",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LIDLEAN020",
+   "n": "TATIANE SILVA GUIMARAES",
+   "em": "tatiane.guimaraes@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-12-31",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN021",
+   "n": "DAMIRES HAIG",
+   "em": "damires.haig@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-12-18",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN022",
+   "n": "DENIANE CORREIA DA SILVA COUTINHO",
+   "em": "deniane.coutinho@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-12-18",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN023",
+   "n": "LUIZ OTAVIO DE SOUZA LIMA",
+   "em": "luiz.souza@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2025-12-16",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN024",
+   "n": "RODRIGO SOUSA VAZ",
+   "em": "rodrigo.vaz@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2026-05-14",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787,
+    22790,
+    22784
+   ]
+  },
+  {
+   "code": "LIDLEAN026",
+   "n": "JUNIO DA SILVA DE JESUS",
+   "em": "junio.jesus@tracbel.com.br",
+   "cad": "2025-05-05",
+   "l": "2026-09-23",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427,
+    22781,
+    22787
+   ]
+  },
+  {
+   "code": "LIDLEAN027",
+   "n": "Sandro Teste Lean",
+   "em": "sandrobadnanas@gmail.com",
+   "cad": "2025-05-06",
+   "l": "",
+   "u": "Volvo CE",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LIDLEAN027",
+   "n": "Thamires Menezes",
+   "em": "thamires.menezes@gotemburgo.com.br",
+   "cad": "2025-05-27",
+   "l": "2025-06-16",
+   "u": "Gotemburgo",
+   "r": "Avulso",
+   "t": [],
+   "enr": [
+    22795
+   ]
+  },
+  {
+   "code": "Brv1",
+   "n": "Magel Fonseca",
+   "em": "magel.fonseca@bravolog.com.br",
+   "cad": "2025-06-02",
+   "l": "2025-08-29",
+   "u": "Bravo Log",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Brv2",
+   "n": "Arthur Natale",
+   "em": "arthur.natale@bravolog.com.br",
+   "cad": "2025-06-02",
+   "l": "2025-09-02",
+   "u": "Bravo Log",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798,
+    21427
+   ]
+  },
+  {
+   "code": "Brv3",
+   "n": "Cristiano Fonseca",
+   "em": "cristiano.fonseca@bravolog.com.br",
+   "cad": "2025-06-02",
+   "l": "2025-09-01",
+   "u": "Bravo Log",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "pot002",
+   "n": "Joice França",
+   "em": "joice@potiguar.com.br",
+   "cad": "2026-01-12",
+   "l": "2026-07-09",
+   "u": "Potiguar",
+   "r": "",
+   "t": [
+    518
+   ],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "al002",
+   "n": "Samuel Silva de Rezende",
+   "em": "samuel.rezende@leandealers.com.br",
+   "cad": "2026-03-11",
+   "l": "2026-05-22",
+   "u": "Lean Dealers Academy",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": []
+  },
+  {
+   "code": "pot003",
+   "n": "Niel Siqueira",
+   "em": "niel@potiguar.com.br",
+   "cad": "2026-04-14",
+   "l": "2026-07-06",
+   "u": "Potiguar",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "pot004",
+   "n": "Matheus Borges",
+   "em": "matheus@potiguar.com.br",
+   "cad": "2026-04-14",
+   "l": "2026-04-14",
+   "u": "Potiguar",
+   "r": "Especialistas Lean",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol01",
+   "n": "OSMAR LUCAS NASCIMENTO LIMA",
+   "em": "osmar.lucas@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "2026-07-31",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol02",
+   "n": "CLEITON VERAS DE OLIVEIRA",
+   "em": "oficina@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol03",
+   "n": "DEMETRIO DA SILVA LEITE",
+   "em": "demetrio.silva@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol04",
+   "n": "RUAN DE SOUSA PEREIRA",
+   "em": "ruan.sousa@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "2026-08-04",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol05",
+   "n": "CAMILA VITORIA DA CONCEICAO ARAUJO TORRES",
+   "em": "camila.vitoria@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol06",
+   "n": "MICKAELLE VICTORIA OLIVEIRA LEAL",
+   "em": "mickaelle.victoria@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "Sol07",
+   "n": "Bianca Ferreira Rocha",
+   "em": "bianca.rocha@solnascentemotos.com.br",
+   "cad": "2026-07-31",
+   "l": "2026-07-31",
+   "u": "Solnascente",
+   "r": "",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "ESP-BR-001",
+   "n": "Oliver Gomes",
+   "em": "ogomes@nors.com",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-002",
+   "n": "Tamyres Costa",
+   "em": "tcosta@nors.com",
+   "cad": "2026-10-01",
+   "l": "2026-10-02",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-003",
+   "n": "Evllyn Jesus",
+   "em": "ejesus@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-004",
+   "n": "Matheus Ribeiro",
+   "em": "maribeiro@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-005",
+   "n": "Ocimar Andrade",
+   "em": "oandrade@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-006",
+   "n": "Bianca Oliveira",
+   "em": "bioliveira@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-007",
+   "n": "Angela Mello",
+   "em": "anmello@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-008",
+   "n": "Priscila Campos",
+   "em": "pcampos@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-009",
+   "n": "Jessica Nobre",
+   "em": "jenobre@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-010",
+   "n": "Julia Melo",
+   "em": "xuser1639@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-011",
+   "n": "João Nogueira",
+   "em": "jonogueira@nors.com",
+   "cad": "2026-10-01",
+   "l": "2026-10-06",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311,
+    591
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-012",
+   "n": "Murilo Duarte",
+   "em": "xuser1640@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-013",
+   "n": "Rebecca Alves",
+   "em": "xuser1641@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-014",
+   "n": "Rosilene Souza",
+   "em": "rossouza@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-015",
+   "n": "Alessandro Campo",
+   "em": "acampo@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-016",
+   "n": "Kamila Moraes",
+   "em": "kmoraes@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-017",
+   "n": "Jania Mendes",
+   "em": "jamendes@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-018",
+   "n": "Vinicius Pereira",
+   "em": "vinpereira@nors.com",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Nors",
+   "r": "Especialistas Lean",
+   "t": [
+    1311,
+    591
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-019",
+   "n": "Danubiano Motta",
+   "em": "danubiano.motta@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-020",
+   "n": "Anthony Baracho",
+   "em": "anthony.baracho@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311,
+    591
+   ],
+   "enr": [
+    22782
+   ]
+  },
+  {
+   "code": "ESP-BR-021",
+   "n": "Talita Soares",
+   "em": "talita.soares@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-022",
+   "n": "Matheus Fontes",
+   "em": "matheus.fontes@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-023",
+   "n": "Nicolly Pletsch",
+   "em": "nicolly.pletsch@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-024",
+   "n": "Gabriela Gomes",
+   "em": "gabriela.gomes@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-025",
+   "n": "Eliane Lima",
+   "em": "eliane.lima@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-02",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-026",
+   "n": "Darlan Jadson Nunes dos Santos",
+   "em": "darlan.santos@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-027",
+   "n": "Mikelly Souza",
+   "em": "mikelly.souza@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-028",
+   "n": "Ciro Santos",
+   "em": "ciro.santos@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-029",
+   "n": "Brenda Larissa Silva Lisboa",
+   "em": "brenda.lisboa@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-030",
+   "n": "Davi Garcia Sousa Gomes",
+   "em": "davi.gomes@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-02",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311,
+    591
+   ],
+   "enr": [
+    22782
+   ]
+  },
+  {
+   "code": "ESP-BR-031",
+   "n": "Thaysa de Souza Melo",
+   "em": "thaysa.melo@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-032",
+   "n": "Natalia Cristiane de Resende",
+   "em": "natalia.resende@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311,
+    591
+   ],
+   "enr": [
+    22782
+   ]
+  },
+  {
+   "code": "ESP-BR-033",
+   "n": "Vinicius Jose de Castro Alves",
+   "em": "vinicius.alves@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-034",
+   "n": "Alex Barbosa Moreira",
+   "em": "alex.moreira@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-035",
+   "n": "Lana Carla Campos Freitas",
+   "em": "lana.freitas@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-036",
+   "n": "Francisco Marden dos Santos Facanha",
+   "em": "francisco.facanha@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-037",
+   "n": "Bruno Rafael Tosta",
+   "em": "bruno.tosta@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-038",
+   "n": "Daniela Maria Silva",
+   "em": "daniela.silva@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-09",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-039",
+   "n": "Luciana da Silva Ferreira Mascarin",
+   "em": "luciana.mascarin@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-09",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-040",
+   "n": "Carlos Eduardo Alves Paiva",
+   "em": "carlos.paiva@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-041",
+   "n": "Matheus Texeira Ribeiro",
+   "em": "matheus.ribeiro@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-07",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "ESP-BR-042",
+   "n": "Rad Elba J Souza",
+   "em": "rad.souza@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Tracbel",
+   "r": "Especialistas Lean",
+   "t": [
+    1311
+   ],
+   "enr": []
+  },
+  {
+   "code": "LID-BR-001",
+   "n": "Demerson Souza",
+   "em": "demersson@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-002",
+   "n": "Osvaldo Junior",
+   "em": "osvaldojunior@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-003",
+   "n": "Eduardo Bernardino",
+   "em": "eduado@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-004",
+   "n": "Ana Julia Lycurgo",
+   "em": "garantia@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-13",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-005",
+   "n": "Vitor Pratis",
+   "em": "suportecomercial@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-017",
+   "n": "Juliano Amorim Gomes",
+   "em": "juliano.gomes@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-006",
+   "n": "Julia Rolim",
+   "em": "financeiro@dinamicaequip.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Dinâmica Equipamentos",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-018",
+   "n": "Thiago Lopes de Morais",
+   "em": "thiago.morais@tracbel.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-09",
+   "u": "Tracbel",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-008",
+   "n": "Anderson Siqueira",
+   "em": "asiqueira@nors.com",
+   "cad": "2026-10-01",
+   "l": "2026-10-16",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-009",
+   "n": "Almir Abuchain",
+   "em": "aabuchain@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-010",
+   "n": "Michael Teixeira",
+   "em": "mteixeira@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-011",
+   "n": "Tarcisio Silva",
+   "em": "tarsilva@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-012",
+   "n": "Jorge Barros",
+   "em": "jobarros@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-013",
+   "n": "Marcio Longo",
+   "em": "mlongo@nors.com",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Nors",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-014",
+   "n": "Tiago Santos",
+   "em": "tiago.santos@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-12",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-015",
+   "n": "Marcelo Silveira",
+   "em": "marcelo.silveira@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "LID-BR-016",
+   "n": "José Francisco",
+   "em": "jose.francisco@gotemburgo.com.br",
+   "cad": "2026-10-01",
+   "l": "2026-10-01",
+   "u": "Gotemburgo",
+   "r": "Liderança Lean",
+   "t": [],
+   "enr": [
+    21427
+   ]
+  },
+  {
+   "code": "VMIS01",
+   "n": "MARIA FERNANDA BARCELOS DE ALMEIDA",
+   "em": "maria.almeida@vmis.com.br",
+   "cad": "2026-10-15",
+   "l": "2026-10-15",
+   "u": "VMI",
+   "r": "Lean",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "VMIS02",
+   "n": "LUCAS SILVA DE OLIVEIRA",
+   "em": "lucas.silva@vmis.com.br",
+   "cad": "2026-10-15",
+   "l": "2026-10-15",
+   "u": "VMI",
+   "r": "Lean",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  },
+  {
+   "code": "VMIS03",
+   "n": "TALITA FERNANDES DE CASTRO SILVA",
+   "em": "talita.silva@vmis.com.br",
+   "cad": "2026-10-15",
+   "l": "",
+   "u": "VMI",
+   "r": "Lean",
+   "t": [],
+   "enr": [
+    24798
+   ]
+  }
+ ]
+}
