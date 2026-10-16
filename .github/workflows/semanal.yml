@@ -58,6 +58,14 @@ jobs:
           grep -qi "cdm\|ascendum" out/$d/rieder.html out/$d/rieder_email.html && { echo "VIOLAÇÃO: Rieder cita outro dealer"; exit 1; } || true
           echo "ok"
 
+      - name: Enviar PDFs e saídas ao Dropbox (Turmas 2026)
+        continue-on-error: true
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+        run: python3 dropbox_upload.py
+
       - name: Commit dos resultados
         run: |
           git config user.name "vce-dashboard bot"

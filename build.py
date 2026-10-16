@@ -282,23 +282,18 @@ def barra_txt(p):
     n = round(p / 10); return '▰' * n + '▱' * (10 - n)
 
 def email_dealer(dk):
-    d = DEALERS[dk]; t = T['es']; h = ''
-    h += f'<p>Estimado equipo de <b>{esc(d["nome"])}</b>,</p><p>Compartimos el avance semanal de sus participantes en la <b>{esc(cfg["programa"])}</b> (semana {resumen["semana"]}, datos del {fdate(DATE)}).</p>'
+    """Texto curto de acompanhamento (o Sandro envia o e-mail à mão com o PDF anexo). Sem tabelas, sem dados de outros dealers."""
+    d = DEALERS[dk]; h = ''
+    h += f'<p>Estimado equipo de <b>{esc(d["nome"])}</b>,</p>'
+    h += f'<p>Adjunto el avance semanal de sus participantes en la <b>{esc(cfg["programa"])}</b> (semana {resumen["semana"]}, datos del {fdate(DATE)}).</p>'
+    frases = []
     for pk in TR:
-        rp = [x for x in people if x['dealer'] == dk and x['programa'] == pk]
-        if not rp: continue
-        r = resumen['dealers'][dk][pk]
-        h += f'<h3>{esc(TR[pk]["nome"])}</h3>'
-        h += '<table><tr>' + ''.join(f'<th>{t[k]}</th>' for k in ['inscritos', 'registrados', 'con_acceso', 'iniciaron', 'concluyeron', 'avance_prom']) + '</tr>'
-        h += f'<tr><td>{r["inscritos"]}</td><td>{r["registrados"]}</td><td>{r["con_acceso"]}</td><td>{r["iniciaron"]}</td><td>{r["concluyeron"]}</td><td><b>{r["avance_prom"]}%</b> {barra_txt(r["avance_prom"])}</td></tr></table>'
-        ids = [str(c) for c in TR[pk]['cursos']]; curto = TR[pk]['cursos_curto']
-        h += '<table><tr><th>' + t['nombre'] + '</th><th>' + t['acceso'] + '</th>' + (''.join(f'<th>{esc(curto[c])}</th>' for c in ids) if len(ids) > 1 else '') + f'<th>{t["avance"]}</th><th>{t["delta"]}</th><th>{t["estado"]}</th></tr>'
-        for x in sorted(rp, key=lambda z: (-(z['avance'] or 0), norm(z['nome']))):
-            av = x['avance'] or 0
-            dl = '—' if x['delta'] is None else (f'+{x["delta"]} pp' if x['delta'] > 0 else (f'{x["delta"]} pp' if x['delta'] < 0 else '0'))
-            h += f'<tr><td>{esc(x["nome"])}</td><td>{fdate(x["ultimo_acceso"])}</td>' + (''.join(f'<td>{(str(x["cursos"][c]) + "%") if x["cursos"][c] else "·"}</td>' for c in ids) if len(ids) > 1 else '') + f'<td><b>{av}%</b> {barra_txt(av)}</td><td>{dl}</td><td>{ETIQUETA["es"][x["estado"]]}</td></tr>'
-        h += '</table>'
-    h += f'<p><i>{t["nota_calc"]} ({fdate(INICIO)}).</i></p><p>Quedamos a disposición para apoyar a los participantes que aún no iniciaron.</p><p>Saludos,<br>{esc(cfg["remetente_nome"])}</p>'
+        r = resumen['dealers'][dk].get(pk)
+        if not r: continue
+        frases.append(f'{esc(TR[pk]["nome"])}: {r["inscritos"]} inscritos, {r["iniciaron"]} ya iniciaron, {r["concluyeron"]} concluyeron, avance medio {r["avance_prom"]}%')
+    h += '<p>' + '.<br>'.join(frases) + '.</p>'
+    h += '<p>El detalle por participante está en el PDF. Quedamos a disposición para apoyar a quienes aún no iniciaron.</p>'
+    h += f'<p>Saludos,<br>{esc(cfg["remetente_nome"])}</p>'
     return h
 
 for dk in DEALERS:
