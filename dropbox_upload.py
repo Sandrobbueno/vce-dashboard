@@ -62,6 +62,9 @@ files = []
 files += [(f, f'{DEST}/04_PDFs_Semanais/{os.path.basename(f)}') for f in glob.glob(str(BASE / '04_PDFs_Semanais' / f'{date}_*.pdf'))]
 files += [(f, f'{DEST}/03_Dashboard/out/{date}/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'out' / date / '*')) if not f.endswith('.pdf')]
 files += [(f, f'{DEST}/03_Dashboard/history/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'history' / f'dump_es_{date}.json'))]
+if (BASE / 'out' / date / 'textos_email.txt').exists():
+    files.append((str(BASE / 'out' / date / 'textos_email.txt'), f'{DEST}/04_PDFs_Semanais/{date}_Textos_Email.txt'))
+files += [(str(BASE / n), f'{DEST}/03_Dashboard/{n}') for n in ('ROTINA.md', 'README.md', 'config.json', 'build.py', 'extract.py', 'pdf.py', 'dropbox_upload.py') if (BASE / n).exists()]
 if not files: sys.exit(f'nada para enviar para a data {date}')
 for local, remote in files: upload(local, remote)
 print(f'{len(files)} arquivos enviados ao Dropbox ({acct.get("email")})')

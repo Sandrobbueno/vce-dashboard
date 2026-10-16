@@ -299,6 +299,14 @@ def email_dealer(dk):
 for dk in DEALERS:
     (OUT / f'{dk}_email.html').write_text(email_dealer(dk), encoding='utf-8')
 
+# textos de e-mail em arquivo único (texto puro) para o envio manual com o PDF anexo
+import re as _re
+def _txt(h): return _re.sub(r'\n{3,}', '\n\n', _re.sub(r'<[^>]+>', lambda m: '\n' if m.group(0) in ('<br>', '</p>') else '', h)).strip()
+blocos = []
+for dk in DEALERS:
+    blocos.append(f"=== {DEALERS[dk]['nome']} · anexar {DATE}_{DEALERS[dk]['nome']}_Avance_Semanal.pdf ===\nAsunto: Formación Lean Volvo CE · Avance semanal {DEALERS[dk]['nome']} · {fdate(DATE)}\n\n" + html.unescape(_txt(email_dealer(dk))))
+(OUT / 'textos_email.txt').write_text('\n\n\n'.join(blocos) + '\n', encoding='utf-8')
+
 # ---------- guarda de confidencialidade ----------
 # Nenhuma saída individual pode citar a rede, a média da rede ou o nome de outro dealer. Se citar, o build falha.
 PROIBIDO = ['promedio de la red', 'média da rede', 'red:', 'la red', 'a rede']
