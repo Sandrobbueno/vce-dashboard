@@ -15,19 +15,19 @@
       "id_trilha": 1311,
       "cursos": [
         22782,
-        24798,
+        22786,
         22794,
         24172,
         22795
       ],
       "cursos_curto": {
         "22782": "Valor",
-        "24798": "5S",
+        "22786": "5S",
         "22794": "Gemba",
         "24172": "Kanban",
         "22795": "Ferramentas"
       },
-      "nota": "COMPOSIÇÃO A CONFIRMAR pelo Sandro no painel da Hotscool (a API não expõe a trilha). Hipótese: espelho da trilha em espanhol. Há dois cursos de 5S na escola (22786 'Os 5 esses' e 24798 '5 esses'); assumido o 24798, mais recente."
+      "nota": "Confirmado pelo Sandro em 16/10/2026 no painel da Hotscool: o curso de 5S da trilha é 'Os 5 esses' (22786). Demais cursos espelham a trilha ES (Valor, Gemba, Kanban, Ferramentas de Gestão e Qualidade)."
     },
     "lideranca": {
       "nome": "Liderança Lean",

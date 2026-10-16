@@ -39,7 +39,7 @@ A chave da API está em `../00_Chaves_API/chave_api_es.txt` (só a chave, 96 car
 ## Escola em português (adicionada em 16/10/2026)
 - Plataforma "Lean Dealers Academy" (PT), chave `HOTSCOOL_KEY_PT`. Turma cadastrada em 01/10/2026 (início da turma para o cálculo de "acessaram").
 - Roster: `importacao_BRASIL_ESPECIALISTAS.csv` (42) e `importacao_BRASIL_LIDERANCA.csv` (18). Dealers: Nors (2287), Gotemburgo (2313), Tracbel (2314), Dinâmica Equipamentos (2285, só Liderança).
-- Trilha "Especialistas Lean 2026" (id 1311): **composição a confirmar pelo Sandro no painel da Hotscool**. Hipótese em uso (espelho da escola ES): Valor 22782, 5 esses 24798, Gemba 22794, Kanban 24172, Ferramentas de Gestão e Qualidade 22795. Atenção: a escola tem dois cursos de 5S (22786 "Os 5 esses" e 24798 "5 esses").
+- Trilha "Especialistas Lean 2026" (id 1311) = Valor 22782, **Os 5 esses 22786** (confirmado pelo Sandro em 16/10/2026; a escola tem outro curso "5 esses" 24798 que não é o da trilha), Gemba 22794, Kanban 24172, Ferramentas de Gestão e Qualidade 22795.
 - Liderança Lean = curso 21427 (17 dos 18 líderes estão matriculados só nele).
 - Saídas em português; PDFs `AAAA-MM-DD_<Dealer>_Avanco_Semanal.pdf`, consolidado `_Consolidado_Interno_PT.pdf`, textos `_Textos_Email_PT.txt`.
 
