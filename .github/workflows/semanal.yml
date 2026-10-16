@@ -48,15 +48,15 @@ jobs:
           HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
           HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
         run: |
-          set -e
+          set -eo pipefail
           : > build.log
           for lang in $LANGS; do
             var="HOTSCOOL_KEY_$(echo $lang | tr a-z A-Z)"
             if [ -z "${!var}" ]; then echo "[$lang] segredo $var não cadastrado; escola pulada" | tee -a build.log; continue; fi
             echo "== escola $lang ==" | tee -a build.log
-            python3 extract.py --lang $lang | tee -a build.log
-            python3 build.py --lang $lang | tee -a build.log      # aborta se uma saída individual citar a rede ou outro dealer
-            python3 pdf.py --lang $lang | tee -a build.log || echo "[$lang] PDF falhou (segue sem PDF)" | tee -a build.log
+            python3 extract.py --lang $lang 2>&1 | tee -a build.log
+            python3 build.py --lang $lang 2>&1 | tee -a build.log      # aborta se uma saída individual citar a rede ou outro dealer
+            (python3 pdf.py --lang $lang 2>&1 || echo "[$lang] PDF falhou (segue sem PDF)") | tee -a build.log
           done
 
       - name: Enviar PDFs e saídas ao Dropbox (Turmas 2026)
