@@ -44,7 +44,7 @@ A chave da API está em `../00_Chaves_API/chave_api_es.txt` (só a chave, 96 car
 - Saídas em português; PDFs `AAAA-MM-DD_<Dealer>_Avanco_Semanal.pdf`, consolidado `_Consolidado_Interno_PT.pdf`, textos `_Textos_Email_PT.txt`.
 
 ## Regras de cálculo (decididas em 14/10/2026, valem para as duas escolas)
-1. **Roster manda.** Quem é da turma vem das planilhas de importação (16 e 18/09), transcritas no `config.json`. A plataforma só informa progresso. Motivo: 6 líderes de Costa Rica e Rieder já existiam com cadastro de 2025 e cargos antigos; Katherina Bolaños (CDM) não existe na plataforma. Pessoa na trilha mas fora do roster aparece só no consolidado interno ("extras").
+1. **Roster manda.** Quem é da turma vem das planilhas de importação (16 e 18/09), transcritas no `config.json`. A plataforma só informa progresso. Motivo: 6 líderes de Costa Rica e Rieder já existiam com cadastro de 2025 e cargos antigos; Katherina Bolaños (CDM) não existia na plataforma (cadastrada pela API em 16/10/2026, id 698660). Pessoa na trilha mas fora do roster aparece só no consolidado interno ("extras").
 2. **Expertos Lean 2026 = 5 cursos**: Valor (24185), 5S (24475), Gemba (25040), Kanban (25757), Herramientas (25792). A API não expõe a composição da trilha (403). Os alunos de 2025 também fizeram Fundamentos e Planteando Problemas; esses cursos não contam.
 3. **Liderazgo Lean = só o curso Liderazgo Lean (25023)**. Líder que também percorre a trilha Expertos aparece com o % dela numa coluna à parte ("También en Expertos"), sem entrar no avanço do programa.
 4. **% da trilha = média simples dos cursos**; curso sem relatório = 0; concluído = 100.
@@ -78,6 +78,14 @@ A chave da API está em `../00_Chaves_API/chave_api_es.txt` (só a chave, 96 car
 ## Pendências abertas (14/10/2026)
 - Destinatários por dealer (nome + e-mail) ainda não informados → `config.json` → `dealers.*.destinatarios`.
 - Liberação de `api.hotscool.com` na política de rede do Claude (decide se a tarefa agendada roda sozinha).
-- Katherina Bolaños (CDM, Liderazgo) sem cadastro na plataforma: cadastrar ou tirar do roster.
 - Turma em português (Brasil): mesma estrutura; precisa da chave da escola em português (`00_Chaves_API/chave_api_pt.txt`) e do roster das planilhas `02_Importacao_Plataforma/*/Portugues - Brasil/importacao_BRASIL_*.csv`.
 - Primeiro envio: Ascendum (1%) e Rieder (1%, 2 de 10 acessaram) vão receber um retrato ruim. Recomendação: o Sandro envia a primeira semana pessoalmente com uma mensagem de contexto; a automação assume da segunda em diante.
+
+## Ações administrativas pela API (desde 16/10/2026)
+A chave de cada escola também escreve. O que dá para fazer a pedido do Sandro no chat, com o Mac ligado (navegador interno) ou por workflow no GitHub:
+- **Cadastrar** aluno com unidade/departamento/cargo: `POST /v1/leads/enrollment/groups` (nome, email, id_pais=1, id_unidade, id_departamento, id_cargo, codigo_externo, senha). Cria só o cadastro na escola.
+- **Matricular** em curso: `POST /v1/students/enrollment` (nome, email, id_curso, id_pais). Um curso por chamada. **Trilha não é atribuível pela API** (endpoints de trilha dão 403); a trilha tem de ser dada no painel da Hotscool, ou o dashboard segue pelo roster + cursos.
+- **Bloquear/desbloquear**: `PUT /v1/students/block-access/school/{id}/{status}` (escola inteira) ou `PUT /v1/students/access/{id}/{curso}/{status}` (um curso).
+- **Tirar de um curso**: `DELETE /v1/students/withdraw/{id}/{curso}` (apaga o progresso; só com aceite explícito).
+- **Excluir aluno não existe** na API. O caminho é bloquear.
+Regras: uma ação por pedido, com nome e e-mail confirmados; `enviar_email_notificacao=0` (o Sandro avisa a pessoa); tudo registrado em `acoes.log`; roster do `config_*.json` atualizado no mesmo passo. Consulta por código externo: `GET /v1/students/external_code/{codigo}`.
