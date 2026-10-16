@@ -1,0 +1,26 @@
+name: Descobrir estrutura da escola (Hotscool)
+on:
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: 'Idioma/escola: es ou pt'
+        required: true
+        default: 'pt'
+permissions:
+  contents: write
+jobs:
+  descobrir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Descobrir
+        env:
+          HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
+          HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
+        run: python3 discover.py --lang "${{ github.event.inputs.lang }}"
+      - name: Commit
+        run: |
+          git config user.name "vce-dashboard bot"; git config user.email "actions@users.noreply.github.com"
+          git add discovery_*.json; git diff --cached --quiet || (git commit -m "Descoberta da escola ${{ github.event.inputs.lang }}" && git push)
