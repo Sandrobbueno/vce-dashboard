@@ -15,7 +15,10 @@ import os, sys, json, glob, pathlib, urllib.request, urllib.parse, urllib.error,
 
 BASE = pathlib.Path(__file__).parent
 DEST = '/Brazil LEAN/Universidades Lean/VCE/Turmas 2026'
-date = sys.argv[1] if len(sys.argv) > 1 else sorted(p.name for p in (BASE / 'out').iterdir())[-1]
+LANG = sys.argv[sys.argv.index('--lang') + 1] if '--lang' in sys.argv else 'es'
+args = [a for i, a in enumerate(sys.argv[1:]) if a != '--lang' and sys.argv[i] != '--lang']
+cfg = json.loads((BASE / f'config_{LANG}.json').read_text(encoding='utf-8'))
+date = args[0] if args else sorted(p.name for p in (BASE / 'out' / LANG).iterdir())[-1]
 
 key, secret, refresh = (os.environ.get(k) for k in ('DROPBOX_APP_KEY', 'DROPBOX_APP_SECRET', 'DROPBOX_REFRESH_TOKEN'))
 if not (key and secret and refresh):
@@ -59,12 +62,13 @@ def upload(local, remote):
     print('enviado', r.get('path_display'), f'{len(data)//1024} KB')
 
 files = []
-files += [(f, f'{DEST}/04_PDFs_Semanais/{os.path.basename(f)}') for f in glob.glob(str(BASE / '04_PDFs_Semanais' / f'{date}_*.pdf'))]
-files += [(f, f'{DEST}/03_Dashboard/out/{date}/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'out' / date / '*')) if not f.endswith('.pdf')]
-files += [(f, f'{DEST}/03_Dashboard/history/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'history' / f'dump_es_{date}.json'))]
-if (BASE / 'out' / date / 'textos_email.txt').exists():
-    files.append((str(BASE / 'out' / date / 'textos_email.txt'), f'{DEST}/04_PDFs_Semanais/{date}_Textos_Email.txt'))
-files += [(str(BASE / n), f'{DEST}/03_Dashboard/{n}') for n in ('ROTINA.md', 'README.md', 'config.json', 'build.py', 'extract.py', 'pdf.py', 'dropbox_upload.py') if (BASE / n).exists()]
+nomes_pdf = [f"{date}_{d['nome'].replace(' ', '_')}_{cfg.get('sufixo_pdf', 'Avance_Semanal')}.pdf" for d in cfg['dealers'].values()] + [f"{date}_{cfg.get('sufixo_consolidado', 'Consolidado_Interno')}.pdf"]
+files += [(str(BASE / '04_PDFs_Semanais' / n), f'{DEST}/04_PDFs_Semanais/{n}') for n in nomes_pdf if (BASE / '04_PDFs_Semanais' / n).exists()]
+files += [(f, f'{DEST}/03_Dashboard/out/{LANG}/{date}/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'out' / LANG / date / '*')) if not f.endswith('.pdf')]
+files += [(f, f'{DEST}/03_Dashboard/history/{os.path.basename(f)}') for f in glob.glob(str(BASE / 'history' / f'dump_{LANG}_{date}.json'))]
+if (BASE / 'out' / LANG / date / 'textos_email.txt').exists():
+    files.append((str(BASE / 'out' / LANG / date / 'textos_email.txt'), f"{DEST}/04_PDFs_Semanais/{date}_{cfg.get('sufixo_textos', 'Textos_Email')}.txt"))
+files += [(str(BASE / n), f'{DEST}/03_Dashboard/{n}') for n in ('ROTINA.md', 'README.md', 'config_es.json', 'config_pt.json', 'build.py', 'extract.py', 'pdf.py', 'dropbox_upload.py') if (BASE / n).exists()]
 if not files: sys.exit(f'nada para enviar para a data {date}')
 for local, remote in files: upload(local, remote)
 print(f'{len(files)} arquivos enviados ao Dropbox ({acct.get("email")})')

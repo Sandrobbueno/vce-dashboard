@@ -19,7 +19,7 @@ import json, os, sys, pathlib, datetime, urllib.request, urllib.error, concurren
 
 BASE = pathlib.Path(__file__).parent
 LANG = sys.argv[sys.argv.index('--lang') + 1] if '--lang' in sys.argv else 'es'
-cfg = json.loads((BASE / 'config.json').read_text(encoding='utf-8'))
+cfg = json.loads((BASE / f'config_{LANG}.json').read_text(encoding='utf-8'))
 key = os.environ.get(f'HOTSCOOL_KEY_{LANG.upper()}') or (BASE.parent / '00_Chaves_API' / f'chave_api_{LANG}.txt').read_text().strip()
 API = 'https://api.hotscool.com/v1/'
 
@@ -43,8 +43,8 @@ def arr(x): return x if isinstance(x, list) else (list(x.values()) if isinstance
 courses = get_all('courses/all/')
 students = get_all('students/3/all/')
 roster = {p['email'].lower() for p in cfg['roster']}
-trail_ids = {t['id_trilha'] for t in cfg['trilhas'].values()}
-cargos = {'especialistas lean', 'lidenrança lean', 'liderança lean'}
+trail_ids = {t['id_trilha'] for t in cfg['trilhas'].values() if t.get('id_trilha')}
+cargos = {'especialistas lean', 'lidenrança lean', 'liderança lean'}  # grafias das duas escolas
 cohort = [s for s in students if (s.get('email') or '').lower() in roster
           or any(t.get('id_trilha') in trail_ids for t in arr(s.get('trilhas')))
           or ((s.get('categorizacao') or {}).get('nome_cargo') or '').strip().lower() in cargos]

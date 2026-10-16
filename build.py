@@ -13,9 +13,9 @@ Regras de cálculo: ver ROTINA.md.
 import json, sys, glob, os, re, html, datetime, pathlib, unicodedata
 
 BASE = pathlib.Path(__file__).parent
-cfg = json.loads((BASE / 'config.json').read_text(encoding='utf-8'))
-LANG = 'es'
-if '--lang' in sys.argv: LANG = sys.argv[sys.argv.index('--lang') + 1]
+LANG = sys.argv[sys.argv.index('--lang') + 1] if '--lang' in sys.argv else 'es'
+cfg = json.loads((BASE / f'config_{LANG}.json').read_text(encoding='utf-8'))
+L = cfg.get('idioma', LANG)  # idioma das saídas para os dealers
 
 # ---------- dumps ----------
 dumps = sorted(glob.glob(str(BASE / 'history' / f'dump_{LANG}_*.json')))
@@ -27,7 +27,7 @@ cur = json.loads(open(dumps[-1], encoding='utf-8').read())
 prev = json.loads(open(dumps[-2], encoding='utf-8').read()) if len(dumps) > 1 else None
 hist = [json.loads(open(x, encoding='utf-8').read()) for x in dumps]
 DATE = dumps[-1].split('_')[-1][:10]
-OUT = BASE / 'out' / DATE
+OUT = BASE / 'out' / LANG / DATE
 OUT.mkdir(parents=True, exist_ok=True)
 
 INICIO = cfg['inicio_turma']
@@ -215,7 +215,7 @@ def tabela_pessoas(rows_p, prog, t, lang, mostrar_dealer=False):
         h += '</tr>'
     return h + '</tbody></table>'
 
-def tabela_cursos(rows_p, prog, t):
+def tabela_cursos(rows_p, prog, t, lang='es'):
     ids = [str(c) for c in TR[prog]['cursos']]
     if len(ids) < 2: return ''
     n = len(rows_p)
@@ -223,7 +223,7 @@ def tabela_cursos(rows_p, prog, t):
     for c in ids:
         done = sum(1 for x in rows_p if x['cursos'][c] == 100); started = sum(1 for x in rows_p if 0 < x['cursos'][c] < 100)
         w = round(100 * done / n) if n else 0
-        h += f'<tr><td class="n" style="width:38%">{esc(COURSE_NAME.get(c, c))}</td><td><span class="bar" style="width:160px"><i style="width:{w}%"></i></span><span class="pct">{done}</span> <span class="cell">/ {n} · {started} en curso</span></td></tr>'
+        h += f'<tr><td class="n" style="width:38%">{esc(COURSE_NAME.get(c, c))}</td><td><span class="bar" style="width:160px"><i style="width:{w}%"></i></span><span class="pct">{done}</span> <span class="cell">/ {n} · {started} {"en curso" if lang == "es" else "em curso"}</span></td></tr>'
     return h + '</table></div>'
 
 def tabela_evol(dk, prog, t, lang):
@@ -231,7 +231,7 @@ def tabela_evol(dk, prog, t, lang):
     h = f'<div class="chart"><div class="sub" style="font-size:12px;margin-bottom:8px">{t["evol"]}</div><table><tr><th></th>' + ''.join(f'<th class="c">{fdate(d, lang)}</th>' for d, _ in pts) + '</tr>'
     h += f'<tr><td class="n"><b>{esc(DEALERS[dk]["nome"])}</b></td>' + ''.join(f'<td class="c"><b>{v}%</b></td>' for _, v in pts) + '</tr></table>'
     # REGRA FIXA (14/10/2026): nenhuma saída individual de dealer mostra média da rede nem dado de outro dealer.
-    if len(pts) < 2: h += f'<div class="note">{t["sin_datos"]}: la serie se construye semana a semana.</div>' if lang == 'es' else f'<div class="note">{t["sin_datos"]}: a série se constrói semana a semana.</div>'
+    if len(pts) < 2: h += (f'<div class="note">{t["sin_datos"]}: la serie se construye semana a semana.</div>' if lang == 'es' else f'<div class="note">{t["sin_datos"]}: a série se constrói semana a semana.</div>')
     return h + '</div>'
 
 def pagina(titulo, subtitulo, corpo, lang):
@@ -242,16 +242,16 @@ def pagina(titulo, subtitulo, corpo, lang):
 <footer><span>{t["pie"]}</span><span>{esc(cfg["marca"])} · {fdate(DATE, lang)}</span></footer></div></body></html>'''
 
 def dashboard_dealer(dk):
-    t = T['es']; d = DEALERS[dk]; corpo = ''
+    t = T[L]; d = DEALERS[dk]; corpo = ''
     for pk in TR:
         rp = [x for x in people if x['dealer'] == dk and x['programa'] == pk]
         if not rp: continue
         r = resumen['dealers'][dk][pk]
         corpo += f'<h2>{esc(TR[pk]["nome"])}</h2>' + tiles(r, t)
-        corpo += '<div class="two" style="margin-top:12px">' + tabela_evol(dk, pk, t, 'es') + tabela_cursos(rp, pk, t) + '</div>'
-        corpo += '<h2 style="font-size:15px">' + t['nombre'] + 's</h2>' + tabela_pessoas(rp, pk, t, 'es')
-    corpo += f'<p class="note">{t["nota_calc"]} ({fdate(INICIO)}).</p>'
-    return pagina(f'{cfg["programa"]} · {d["nome"]}', f'{d["pais"]} · {t["titulo"]}', corpo, 'es')
+        corpo += '<div class="two" style="margin-top:12px">' + tabela_evol(dk, pk, t, L) + tabela_cursos(rp, pk, t, L) + '</div>'
+        corpo += '<h2 style="font-size:15px">' + t['nombre'] + 's</h2>' + tabela_pessoas(rp, pk, t, L)
+    corpo += f'<p class="note">{t["nota_calc"]} ({fdate(INICIO, L)}).</p>'
+    return pagina(f'{cfg["programa"]} · {d["nome"]}', f'{d["pais"]} · {t["titulo"]}', corpo, L)
 
 for dk in DEALERS:
     (OUT / f'{dk}.html').write_text(dashboard_dealer(dk), encoding='utf-8')
@@ -281,19 +281,25 @@ corpo += f'<p class="note">{t["nota_calc"]} ({fdate(INICIO, "pt")}). Excluídos 
 def barra_txt(p):
     n = round(p / 10); return '▰' * n + '▱' * (10 - n)
 
+EMAIL = {
+    'es': dict(sauda='Estimado equipo de <b>{d}</b>,', intro='Adjunto el avance semanal de sus participantes en la <b>{p}</b> (semana {w}, datos del {dt}).',
+               linha='{t}: {i} inscritos, {s} ya iniciaron, {c} concluyeron, avance medio {a}%', fecho='El detalle por participante está en el PDF. Quedamos a disposición para apoyar a quienes aún no iniciaron.', ass='Saludos,', asunto='Asunto: Formación Lean Volvo CE · Avance semanal {d} · {dt}', anexar='anexar'),
+    'pt': dict(sauda='Prezada equipe da <b>{d}</b>,', intro='Segue em anexo o avanço semanal dos seus participantes na <b>{p}</b> (semana {w}, dados de {dt}).',
+               linha='{t}: {i} inscritos, {s} já iniciaram, {c} concluíram, avanço médio {a}%', fecho='O detalhe por participante está no PDF. Ficamos à disposição para apoiar quem ainda não iniciou.', ass='Abraço,', asunto='Assunto: Formação Lean Volvo CE · Avanço semanal {d} · {dt}', anexar='anexar'),
+}
 def email_dealer(dk):
     """Texto curto de acompanhamento (o Sandro envia o e-mail à mão com o PDF anexo). Sem tabelas, sem dados de outros dealers."""
-    d = DEALERS[dk]; h = ''
-    h += f'<p>Estimado equipo de <b>{esc(d["nome"])}</b>,</p>'
-    h += f'<p>Adjunto el avance semanal de sus participantes en la <b>{esc(cfg["programa"])}</b> (semana {resumen["semana"]}, datos del {fdate(DATE)}).</p>'
+    d = DEALERS[dk]; e = EMAIL[L]; h = ''
+    h += '<p>' + e['sauda'].format(d=esc(d['nome'])) + '</p>'
+    h += '<p>' + e['intro'].format(p=esc(cfg['programa']), w=resumen['semana'], dt=fdate(DATE, L)) + '</p>'
     frases = []
     for pk in TR:
         r = resumen['dealers'][dk].get(pk)
         if not r: continue
-        frases.append(f'{esc(TR[pk]["nome"])}: {r["inscritos"]} inscritos, {r["iniciaron"]} ya iniciaron, {r["concluyeron"]} concluyeron, avance medio {r["avance_prom"]}%')
+        frases.append(e['linha'].format(t=esc(TR[pk]['nome']), i=r['inscritos'], s=r['iniciaron'], c=r['concluyeron'], a=r['avance_prom']))
     h += '<p>' + '.<br>'.join(frases) + '.</p>'
-    h += '<p>El detalle por participante está en el PDF. Quedamos a disposición para apoyar a quienes aún no iniciaron.</p>'
-    h += f'<p>Saludos,<br>{esc(cfg["remetente_nome"])}</p>'
+    h += '<p>' + e['fecho'] + '</p>'
+    h += f'<p>{e["ass"]}<br>{esc(cfg["remetente_nome"])}</p>'
     return h
 
 for dk in DEALERS:
@@ -304,12 +310,13 @@ import re as _re
 def _txt(h): return _re.sub(r'\n{3,}', '\n\n', _re.sub(r'<[^>]+>', lambda m: '\n' if m.group(0) in ('<br>', '</p>') else '', h)).strip()
 blocos = []
 for dk in DEALERS:
-    blocos.append(f"=== {DEALERS[dk]['nome']} · anexar {DATE}_{DEALERS[dk]['nome']}_Avance_Semanal.pdf ===\nAsunto: Formación Lean Volvo CE · Avance semanal {DEALERS[dk]['nome']} · {fdate(DATE)}\n\n" + html.unescape(_txt(email_dealer(dk))))
+    nome_pdf = f"{DATE}_{DEALERS[dk]['nome'].replace(' ', '_')}_{cfg.get('sufixo_pdf', 'Avance_Semanal')}.pdf"
+    blocos.append(f"=== {DEALERS[dk]['nome']} · {EMAIL[L]['anexar']} {nome_pdf} ===\n" + EMAIL[L]['asunto'].format(d=DEALERS[dk]['nome'], dt=fdate(DATE, L)) + "\n\n" + html.unescape(_txt(email_dealer(dk))))
 (OUT / 'textos_email.txt').write_text('\n\n\n'.join(blocos) + '\n', encoding='utf-8')
 
 # ---------- guarda de confidencialidade ----------
 # Nenhuma saída individual pode citar a rede, a média da rede ou o nome de outro dealer. Se citar, o build falha.
-PROIBIDO = ['promedio de la red', 'média da rede', 'red:', 'la red', 'a rede']
+PROIBIDO = ['promedio de la red', 'média da rede', 'media da rede', 'la red', 'da rede', 'toda la red', 'toda a rede']
 for dk in DEALERS:
     outros = [DEALERS[o]['nome'].lower() for o in DEALERS if o != dk]
     for f in (OUT / f'{dk}.html', OUT / f'{dk}_email.html'):
@@ -318,7 +325,7 @@ for dk in DEALERS:
         if achados: sys.exit(f'CONFIDENCIALIDADE: {f.name} menciona {achados}. Saída não gerada.')
 
 # ---------- validação impressa ----------
-print(f'{DATE} · semana {resumen["semana"]} · dump {os.path.basename(dumps[-1])} · anterior {os.path.basename(dumps[-2]) if prev else "—"}')
+print(f'[{LANG}] {DATE} · semana {resumen["semana"]} · dump {os.path.basename(dumps[-1])} · anterior {os.path.basename(dumps[-2]) if prev else "—"}')
 for dk in DEALERS:
     for pk, r in resumen['dealers'][dk].items():
         print(f'  {DEALERS[dk]["nome"]:9s} {TR[pk]["nome_curto"]:15s} inscritos {r["inscritos"]:2d} cadastro {r["registrados"]:2d} acessaram {r["con_acceso"]:2d} iniciaram {r["iniciaron"]:2d} concluíram {r["concluyeron"]:2d} avanço {r["avance_prom"]:3d}% cert {r["certificados"]}')

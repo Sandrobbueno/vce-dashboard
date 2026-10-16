@@ -1,4 +1,4 @@
-# Dashboard semanal · Formación Lean Volvo CE (dealers hispânicos)
+# Dashboard semanal · Formação Lean Volvo CE (escola ES: CDM, Ascendum, Rieder · escola PT: Nors, Gotemburgo, Tracbel, Dinâmica Equipamentos)
 
 Fonte de verdade: repositório privado GitHub `Sandrobbueno/vce-dashboard` (desde 16/10/2026). Cópia das saídas no Dropbox: `Brazil LEAN/Universidades Lean/VCE/Turmas 2026`. Criado em 14/10/2026.
 
@@ -36,7 +36,14 @@ Um e-mail por dealer (CDM, Ascendum, Rieder), em espanhol, toda segunda, com ins
 
 A chave da API está em `../00_Chaves_API/chave_api_es.txt` (só a chave, 96 caracteres hexadecimais). `extract.py` lê a variável `HOTSCOOL_KEY_ES` ou esse arquivo. Nunca entra em HTML, dump ou e-mail.
 
-## Regras de cálculo (decididas em 14/10/2026)
+## Escola em português (adicionada em 16/10/2026)
+- Plataforma "Lean Dealers Academy" (PT), chave `HOTSCOOL_KEY_PT`. Turma cadastrada em 01/10/2026 (início da turma para o cálculo de "acessaram").
+- Roster: `importacao_BRASIL_ESPECIALISTAS.csv` (42) e `importacao_BRASIL_LIDERANCA.csv` (18). Dealers: Nors (2287), Gotemburgo (2313), Tracbel (2314), Dinâmica Equipamentos (2285, só Liderança).
+- Trilha "Especialistas Lean 2026" (id 1311): **composição a confirmar pelo Sandro no painel da Hotscool**. Hipótese em uso (espelho da escola ES): Valor 22782, 5 esses 24798, Gemba 22794, Kanban 24172, Ferramentas de Gestão e Qualidade 22795. Atenção: a escola tem dois cursos de 5S (22786 "Os 5 esses" e 24798 "5 esses").
+- Liderança Lean = curso 21427 (17 dos 18 líderes estão matriculados só nele).
+- Saídas em português; PDFs `AAAA-MM-DD_<Dealer>_Avanco_Semanal.pdf`, consolidado `_Consolidado_Interno_PT.pdf`, textos `_Textos_Email_PT.txt`.
+
+## Regras de cálculo (decididas em 14/10/2026, valem para as duas escolas)
 1. **Roster manda.** Quem é da turma vem das planilhas de importação (16 e 18/09), transcritas no `config.json`. A plataforma só informa progresso. Motivo: 6 líderes de Costa Rica e Rieder já existiam com cadastro de 2025 e cargos antigos; Katherina Bolaños (CDM) não existe na plataforma. Pessoa na trilha mas fora do roster aparece só no consolidado interno ("extras").
 2. **Expertos Lean 2026 = 5 cursos**: Valor (24185), 5S (24475), Gemba (25040), Kanban (25757), Herramientas (25792). A API não expõe a composição da trilha (403). Os alunos de 2025 também fizeram Fundamentos e Planteando Problemas; esses cursos não contam.
 3. **Liderazgo Lean = só o curso Liderazgo Lean (25023)**. Líder que também percorre a trilha Expertos aparece com o % dela numa coluna à parte ("También en Expertos"), sem entrar no avanço do programa.

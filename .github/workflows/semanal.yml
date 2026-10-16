@@ -2,9 +2,14 @@ name: Extração e dashboards semanais (Volvo CE)
 
 on:
   schedule:
-    # 07:30 America/Sao_Paulo (UTC-3) = 10:30 UTC, toda segunda. Horário de verão não se aplica (BR não tem desde 2019).
+    # 07:30 America/Sao_Paulo (UTC-3) = 10:30 UTC, toda segunda. Brasil não tem horário de verão desde 2019.
     - cron: '30 10 * * 1'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: 'Escolas a rodar (separadas por espaço): es pt'
+        required: false
+        default: 'es pt'
 
 permissions:
   contents: write
@@ -16,7 +21,9 @@ concurrency:
 jobs:
   rodada:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
+    env:
+      LANGS: ${{ github.event.inputs.langs || 'es pt' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,33 +37,27 @@ jobs:
           echo "api.hotscool.com -> HTTP $code"
           test "$code" = "200"
 
-      - name: Extrair (history/dump_es_<data>.json)
-        env:
-          HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
-        run: |
-          test -n "$HOTSCOOL_KEY_ES" || { echo "Segredo HOTSCOOL_KEY_ES não cadastrado no repositório"; exit 1; }
-          python3 extract.py
-
-      - name: Gerar dashboards e corpos de e-mail (out/<data>/)
-        run: python3 build.py | tee build.log
-
-      - name: Gerar PDFs datados (04_PDFs_Semanais/)
+      - name: Preparar Chromium (PDF)
         continue-on-error: true
         run: |
           pip install -q playwright
           python3 -m playwright install --with-deps chromium
-          python3 pdf.py
 
-      - name: Guarda de confidencialidade (saídas individuais sem rede nem outro dealer)
+      - name: Extrair, gerar, PDF e guarda de confidencialidade (por escola)
+        env:
+          HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
+          HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
         run: |
-          d=$(ls -1 out | sort | tail -1)
-          for f in out/$d/cdm.html out/$d/cdm_email.html out/$d/ascendum.html out/$d/ascendum_email.html out/$d/rieder.html out/$d/rieder_email.html; do
-            if grep -qiE "promedio de la red|media da rede|média da rede" "$f"; then echo "VIOLAÇÃO em $f"; exit 1; fi
+          set -e
+          : > build.log
+          for lang in $LANGS; do
+            var="HOTSCOOL_KEY_$(echo $lang | tr a-z A-Z)"
+            if [ -z "${!var}" ]; then echo "[$lang] segredo $var não cadastrado; escola pulada" | tee -a build.log; continue; fi
+            echo "== escola $lang ==" | tee -a build.log
+            python3 extract.py --lang $lang | tee -a build.log
+            python3 build.py --lang $lang | tee -a build.log      # aborta se uma saída individual citar a rede ou outro dealer
+            python3 pdf.py --lang $lang | tee -a build.log || echo "[$lang] PDF falhou (segue sem PDF)" | tee -a build.log
           done
-          grep -qi "ascendum\|rieder" out/$d/cdm.html out/$d/cdm_email.html && { echo "VIOLAÇÃO: CDM cita outro dealer"; exit 1; } || true
-          grep -qi "cdm\|rieder" out/$d/ascendum.html out/$d/ascendum_email.html && { echo "VIOLAÇÃO: Ascendum cita outro dealer"; exit 1; } || true
-          grep -qi "cdm\|ascendum" out/$d/rieder.html out/$d/rieder_email.html && { echo "VIOLAÇÃO: Rieder cita outro dealer"; exit 1; } || true
-          echo "ok"
 
       - name: Enviar PDFs e saídas ao Dropbox (Turmas 2026)
         continue-on-error: true
@@ -64,20 +65,20 @@ jobs:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-        run: python3 dropbox_upload.py
+        run: |
+          for lang in $LANGS; do
+            [ -d out/$lang ] && python3 dropbox_upload.py --lang $lang || echo "[$lang] sem saídas para enviar"
+          done
 
       - name: Commit dos resultados
         run: |
           git config user.name "vce-dashboard bot"
           git config user.email "actions@users.noreply.github.com"
-          git add history out 04_PDFs_Semanais 2>/dev/null || git add history out
+          git add history out 04_PDFs_Semanais 2>/dev/null || true
           if git diff --cached --quiet; then echo "nada novo"; exit 0; fi
-          d=$(ls -1 out | sort | tail -1)
-          git commit -m "Rodada semanal: dados de $d" -m "$(cat build.log)"
+          git commit -m "Rodada semanal: $(date -u +%Y-%m-%d)" -m "$(cat build.log)"
           git push
 
       - name: Resumo
         run: |
-          d=$(ls -1 out | sort | tail -1)
-          echo "## Rodada $d" >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY; cat build.log >> $GITHUB_STEP_SUMMARY; echo '```' >> $GITHUB_STEP_SUMMARY

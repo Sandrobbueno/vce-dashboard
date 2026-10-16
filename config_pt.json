@@ -1,0 +1,453 @@
+{
+  "programa": "Formação Lean Volvo CE 2026",
+  "escola": "Lean Dealers Academy",
+  "idioma": "pt",
+  "inicio_turma": "2026-10-01",
+  "marca": "Lean Dealers",
+  "remetente_nome": "Sandro Bueno · Lean Dealers",
+  "sufixo_pdf": "Avanco_Semanal",
+  "sufixo_consolidado": "Consolidado_Interno_PT",
+  "sufixo_textos": "Textos_Email_PT",
+  "trilhas": {
+    "especialistas": {
+      "nome": "Especialistas Lean 2026",
+      "nome_curto": "Especialistas Lean",
+      "id_trilha": 1311,
+      "cursos": [
+        22782,
+        24798,
+        22794,
+        24172,
+        22795
+      ],
+      "cursos_curto": {
+        "22782": "Valor",
+        "24798": "5S",
+        "22794": "Gemba",
+        "24172": "Kanban",
+        "22795": "Ferramentas"
+      },
+      "nota": "COMPOSIÇÃO A CONFIRMAR pelo Sandro no painel da Hotscool (a API não expõe a trilha). Hipótese: espelho da trilha em espanhol. Há dois cursos de 5S na escola (22786 'Os 5 esses' e 24798 '5 esses'); assumido o 24798, mais recente."
+    },
+    "lideranca": {
+      "nome": "Liderança Lean",
+      "nome_curto": "Liderança Lean",
+      "id_trilha": null,
+      "cursos": [
+        21427
+      ],
+      "cursos_curto": {
+        "21427": "Liderança Lean"
+      }
+    }
+  },
+  "dealers": {
+    "nors": {
+      "nome": "Nors",
+      "pais": "Brasil",
+      "id_unidade": 2287,
+      "dominios": [
+        "nors.com"
+      ],
+      "destinatarios": [],
+      "copia": []
+    },
+    "gotemburgo": {
+      "nome": "Gotemburgo",
+      "pais": "Brasil",
+      "id_unidade": 2313,
+      "dominios": [
+        "gotemburgo.com.br"
+      ],
+      "destinatarios": [],
+      "copia": []
+    },
+    "tracbel": {
+      "nome": "Tracbel",
+      "pais": "Brasil",
+      "id_unidade": 2314,
+      "dominios": [
+        "tracbel.com.br"
+      ],
+      "destinatarios": [],
+      "copia": []
+    },
+    "dinamica": {
+      "nome": "Dinâmica Equipamentos",
+      "pais": "Brasil",
+      "id_unidade": 2285,
+      "dominios": [
+        "dinamicaequip.com.br"
+      ],
+      "destinatarios": [],
+      "copia": []
+    }
+  },
+  "excluir_dominios": [
+    "leandealers.com",
+    "hotscool.com"
+  ],
+  "roster_nota": "Fonte: importacao_BRASIL_ESPECIALISTAS.csv e importacao_BRASIL_LIDERANCA.csv (02_Importacao_Plataforma). Cadastros feitos em 01/10/2026.",
+  "roster": [
+    {
+      "email": "ogomes@nors.com",
+      "nome": "Oliver Gomes",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "tcosta@nors.com",
+      "nome": "Tamyres Costa",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "ejesus@nors.com",
+      "nome": "Evllyn Jesus",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "maribeiro@nors.com",
+      "nome": "Matheus Ribeiro",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "oandrade@nors.com",
+      "nome": "Ocimar Andrade",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "bioliveira@nors.com",
+      "nome": "Bianca Oliveira",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "anmello@nors.com",
+      "nome": "Angela Mello",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "pcampos@nors.com",
+      "nome": "Priscila Campos",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "jenobre@nors.com",
+      "nome": "Jessica Nobre",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "xuser1639@nors.com",
+      "nome": "Julia Melo",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "jonogueira@nors.com",
+      "nome": "João Nogueira",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "xuser1640@nors.com",
+      "nome": "Murilo Duarte",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "xuser1641@nors.com",
+      "nome": "Rebecca Alves",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "rossouza@nors.com",
+      "nome": "Rosilene Souza",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "acampo@nors.com",
+      "nome": "Alessandro Campo",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "kmoraes@nors.com",
+      "nome": "Kamila Moraes",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "jamendes@nors.com",
+      "nome": "Jania Mendes",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "vinpereira@nors.com",
+      "nome": "Vinicius Pereira",
+      "dealer": "nors",
+      "programa": "especialistas"
+    },
+    {
+      "email": "danubiano.motta@gotemburgo.com.br",
+      "nome": "Danubiano Motta",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "anthony.baracho@gotemburgo.com.br",
+      "nome": "Anthony Baracho",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "talita.soares@gotemburgo.com.br",
+      "nome": "Talita Soares",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "matheus.fontes@gotemburgo.com.br",
+      "nome": "Matheus Fontes",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "nicolly.pletsch@gotemburgo.com.br",
+      "nome": "Nicolly Pletsch",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "gabriela.gomes@gotemburgo.com.br",
+      "nome": "Gabriela Gomes",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "eliane.lima@gotemburgo.com.br",
+      "nome": "Eliane Lima",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "darlan.santos@gotemburgo.com.br",
+      "nome": "Darlan Jadson Nunes dos Santos",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "mikelly.souza@gotemburgo.com.br",
+      "nome": "Mikelly Souza",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "ciro.santos@gotemburgo.com.br",
+      "nome": "Ciro Santos",
+      "dealer": "gotemburgo",
+      "programa": "especialistas"
+    },
+    {
+      "email": "brenda.lisboa@tracbel.com.br",
+      "nome": "Brenda Larissa Silva Lisboa",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "davi.gomes@tracbel.com.br",
+      "nome": "Davi Garcia Sousa Gomes",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "thaysa.melo@tracbel.com.br",
+      "nome": "Thaysa de Souza Melo",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "natalia.resende@tracbel.com.br",
+      "nome": "Natalia Cristiane de Resende",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "vinicius.alves@tracbel.com.br",
+      "nome": "Vinicius Jose de Castro Alves",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "alex.moreira@tracbel.com.br",
+      "nome": "Alex Barbosa Moreira",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "lana.freitas@tracbel.com.br",
+      "nome": "Lana Carla Campos Freitas",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "francisco.facanha@tracbel.com.br",
+      "nome": "Francisco Marden dos Santos Facanha",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "bruno.tosta@tracbel.com.br",
+      "nome": "Bruno Rafael Tosta",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "daniela.silva@tracbel.com.br",
+      "nome": "Daniela Maria Silva",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "luciana.mascarin@tracbel.com.br",
+      "nome": "Luciana da Silva Ferreira Mascarin",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "carlos.paiva@tracbel.com.br",
+      "nome": "Carlos Eduardo Alves Paiva",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "matheus.ribeiro@tracbel.com.br",
+      "nome": "Matheus Texeira Ribeiro",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "rad.souza@tracbel.com.br",
+      "nome": "Rad Elba J Souza",
+      "dealer": "tracbel",
+      "programa": "especialistas"
+    },
+    {
+      "email": "demersson@dinamicaequip.com.br",
+      "nome": "Demerson Souza",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "osvaldojunior@dinamicaequip.com.br",
+      "nome": "Osvaldo Junior",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "eduado@dinamicaequip.com.br",
+      "nome": "Eduardo Bernardino",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "garantia@dinamicaequip.com.br",
+      "nome": "Ana Julia Lycurgo",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "suportecomercial@dinamicaequip.com.br",
+      "nome": "Vitor Pratis",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "financeiro@dinamicaequip.com.br",
+      "nome": "Julia Rolim",
+      "dealer": "dinamica",
+      "programa": "lideranca"
+    },
+    {
+      "email": "lmartins@nors.com",
+      "nome": "Luiz Pozniak",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "asiqueira@nors.com",
+      "nome": "Anderson Siqueira",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "aabuchain@nors.com",
+      "nome": "Almir Abuchain",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "mteixeira@nors.com",
+      "nome": "Michael Teixeira",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "tarsilva@nors.com",
+      "nome": "Tarcisio Silva",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "jobarros@nors.com",
+      "nome": "Jorge Barros",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "mlongo@nors.com",
+      "nome": "Marcio Longo",
+      "dealer": "nors",
+      "programa": "lideranca"
+    },
+    {
+      "email": "tiago.santos@gotemburgo.com.br",
+      "nome": "Tiago Santos",
+      "dealer": "gotemburgo",
+      "programa": "lideranca"
+    },
+    {
+      "email": "marcelo.silveira@gotemburgo.com.br",
+      "nome": "Marcelo Silveira",
+      "dealer": "gotemburgo",
+      "programa": "lideranca"
+    },
+    {
+      "email": "jose.francisco@gotemburgo.com.br",
+      "nome": "José Francisco",
+      "dealer": "gotemburgo",
+      "programa": "lideranca"
+    },
+    {
+      "email": "juliano.gomes@tracbel.com.br",
+      "nome": "Juliano Amorim Gomes",
+      "dealer": "tracbel",
+      "programa": "lideranca"
+    },
+    {
+      "email": "thiago.morais@tracbel.com.br",
+      "nome": "Thiago Lopes de Morais",
+      "dealer": "tracbel",
+      "programa": "lideranca"
+    }
+  ]
+}
