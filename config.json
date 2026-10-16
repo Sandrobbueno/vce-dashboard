@@ -1,0 +1,121 @@
+{
+  "programa": "Formación Lean Volvo CE 2026",
+  "escola": "Lean Dealers Academy - Espanhol",
+  "idioma": "es",
+  "inicio_turma": "2026-09-18",
+  "marca": "Lean Dealers",
+  "remetente_nome": "Sandro Bueno · Lean Dealers",
+
+  "trilhas": {
+    "expertos": {
+      "nome": "Expertos Lean 2026",
+      "nome_curto": "Expertos Lean",
+      "id_trilha": 1298,
+      "cursos": [24185, 24475, 25040, 25757, 25792],
+      "cursos_curto": {"24185": "Valor", "24475": "5S", "25040": "Gemba", "25757": "Kanban", "25792": "Herramientas"}
+    },
+    "liderazgo": {
+      "nome": "Liderazgo Lean",
+      "nome_curto": "Liderazgo Lean",
+      "id_trilha": 622,
+      "cursos": [25023],
+      "cursos_curto": {"25023": "Liderazgo Lean"}
+    }
+  },
+
+  "dealers": {
+    "cdm": {
+      "nome": "CDM",
+      "pais": "Panamá y Costa Rica",
+      "id_unidade": 2229,
+      "dominios": ["cdm.com.pa", "cdm.co.cr"],
+      "destinatarios": [],
+      "copia": []
+    },
+    "ascendum": {
+      "nome": "Ascendum",
+      "pais": "México",
+      "id_unidade": 2298,
+      "dominios": ["ascendum.mx"],
+      "destinatarios": [],
+      "copia": []
+    },
+    "rieder": {
+      "nome": "Rieder",
+      "pais": "Paraguay",
+      "id_unidade": 2363,
+      "dominios": ["rieder.com.py"],
+      "destinatarios": [],
+      "copia": []
+    }
+  },
+
+  "excluir_dominios": ["leandealers.com", "hotscool.com"],
+
+  "roster_nota": "Fonte: planilhas de importação de 16 e 18/09/2026 (Importacao Plataforma/*). O roster define quem é da turma; a plataforma informa o progresso. Pessoa fora do roster que apareça na trilha vai para a lista de 'extras' do consolidado interno.",
+  "roster": [
+    {"email": "cdgonzalez@cdm.com.pa", "nome": "Carlos Gonzalez", "dealer": "cdm", "programa": "expertos"},
+    {"email": "icalderon@cdm.com.pa", "nome": "Iliana Calderon", "dealer": "cdm", "programa": "expertos"},
+    {"email": "sreyes@cdm.com.pa", "nome": "Sergio Reyes", "dealer": "cdm", "programa": "expertos"},
+    {"email": "rgonzalez@cdm.com.pa", "nome": "Raúl Gonzalez", "dealer": "cdm", "programa": "expertos"},
+    {"email": "aguarin@cdm.com.pa", "nome": "Adelina Guarin", "dealer": "cdm", "programa": "expertos"},
+    {"email": "xacevedo@cdm.com.pa", "nome": "Xavier Acevedo", "dealer": "cdm", "programa": "expertos"},
+    {"email": "mgiscome@cdm.com.pa", "nome": "Mario Giscome", "dealer": "cdm", "programa": "expertos"},
+    {"email": "emiranda@cdm.com.pa", "nome": "Eduardo Miranda", "dealer": "cdm", "programa": "expertos"},
+    {"email": "trafico@cdm.com.pa", "nome": "Jose Atencio", "dealer": "cdm", "programa": "expertos"},
+    {"email": "maguilar@cdm.com.pa", "nome": "Marco Aguilar", "dealer": "cdm", "programa": "expertos"},
+    {"email": "jcediel@cdm.com.pa", "nome": "Julian Cediel", "dealer": "cdm", "programa": "expertos"},
+    {"email": "csanchez@cdm.co.cr", "nome": "Celeste Sanchez", "dealer": "cdm", "programa": "expertos"},
+    {"email": "ecordero@cdm.co.cr", "nome": "Edwin Cordero", "dealer": "cdm", "programa": "expertos"},
+    {"email": "cmonge@cdm.co.cr", "nome": "Carolina Monge", "dealer": "cdm", "programa": "expertos"},
+    {"email": "jcruz@cdm.co.cr", "nome": "José Cruz", "dealer": "cdm", "programa": "expertos"},
+    {"email": "agonzales@cdm.co.cr", "nome": "Andy Gonzalez", "dealer": "cdm", "programa": "expertos"},
+    {"email": "lmorales@cdm.co.cr", "nome": "Lindsay Morales", "dealer": "cdm", "programa": "expertos"},
+    {"email": "emorales@cdm.co.cr", "nome": "Eladio Morales", "dealer": "cdm", "programa": "expertos"},
+    {"email": "ggarita@cdm.co.cr", "nome": "Byron Siles", "dealer": "cdm", "programa": "expertos"},
+    {"email": "ruth.salina@rieder.com.py", "nome": "Ruth Salina", "dealer": "rieder", "programa": "expertos"},
+    {"email": "celia.martinez@rieder.com.py", "nome": "Celia Martinez", "dealer": "rieder", "programa": "expertos"},
+    {"email": "cindy.lopez@rieder.com.py", "nome": "Cindy Lopez", "dealer": "rieder", "programa": "expertos"},
+    {"email": "kevin.allebrandt@rieder.com.py", "nome": "Kevin Allebrandt Llano", "dealer": "rieder", "programa": "expertos"},
+    {"email": "derlis.flores@rieder.com.py", "nome": "Derlis Flores", "dealer": "rieder", "programa": "expertos"},
+    {"email": "rauljose.gonzalez@rieder.com.py", "nome": "Raúl Gonzalez", "dealer": "rieder", "programa": "expertos"},
+    {"email": "oscar.lopez@rieder.com.py", "nome": "Oscar López", "dealer": "rieder", "programa": "expertos"},
+    {"email": "axel.villalba@rieder.com.py", "nome": "Axel Villalba", "dealer": "rieder", "programa": "expertos"},
+    {"email": "dionicio.ocampos@rieder.com.py", "nome": "Dionicio Ocampos", "dealer": "rieder", "programa": "expertos"},
+    {"email": "elizabeth.gaona@rieder.com.py", "nome": "Elizabeth Gaona", "dealer": "rieder", "programa": "expertos"},
+    {"email": "ramon.bello@ascendum.mx", "nome": "Ramón Bello Rodríguez", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "jmanuel.garcia@ascendum.mx", "nome": "José Manuel García Gómez", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "edgar.sotelo@ascendum.mx", "nome": "Edgar Sotelo Rivera", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "carlos.hernandez@ascendum.mx", "nome": "Carlos Hernández Torres", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "marco.amador@ascendum.mx", "nome": "Marco Antonio Amador Alcántara", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "juan.cerda@ascendum.mx", "nome": "Juan Luis Cerda Hernández", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "ivan.zarate@ascendum.mx", "nome": "Mario Iván Zárate Hernández", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "david.herrera@ascendum.mx", "nome": "David Herrera Juárez", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "julio.luna@ascendum.mx", "nome": "Julio César Luna Villarreal", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "luis.hernandez@ascendum.mx", "nome": "Luis Humberto Hernández Hueso", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "salvador.oseguera@ascendum.mx", "nome": "Salvador Oseguera Ramón", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "ivan.romo@ascendum.mx", "nome": "Iván de Jesús Romo Cornejo", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "pedro.cruz@ascendum.mx", "nome": "Pedro Basílio Cruz Hipólito", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "salvador.arreazola@ascendum.mx", "nome": "Salvador Arreazola Martínez", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "salvador.gonzalez@ascendum.mx", "nome": "Salvador González Maciel", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "alfonso.garcia@ascendum.mx", "nome": "José Alfonso García Carbajal", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "agustin.carrillo@ascendum.mx", "nome": "Agustín Santiago Carrillo Aguilar", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "ramon.flores@ascendum.mx", "nome": "José Ramón Flores Pérez", "dealer": "ascendum", "programa": "expertos"},
+    {"email": "eduardo.martinez@ascendum.mx", "nome": "Eduardo Martinez Salinas", "dealer": "ascendum", "programa": "expertos", "nota": "incluído na plataforma em 30/09, fora da planilha de importação"},
+
+    {"email": "jpineda@cdm.com.pa", "nome": "José Pineda", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "kbolanos@cdm.com.pa", "nome": "Katherina Bolaños", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "ipimentel@cdm.com.pa", "nome": "Itza Pimentel", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "jugonzalez@cdm.com.pa", "nome": "Julia González", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "kcasas@cdm.com.pa", "nome": "Kathrine Casas", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "friquelme@cdm.com.pa", "nome": "Felipe Riquelme", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "lcordero@cdm.co.cr", "nome": "Leonela Cordero", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "jvillalobos@cdm.co.cr", "nome": "Jimena Villalobos", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "jcnavarro@cdm.co.cr", "nome": "Juan Carlos Navarro", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "hvictor@cdm.co.cr", "nome": "Herbert Víctor", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "gcalvo@cdm.co.cr", "nome": "Gerardo Calvo", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "rmorales@cdm.co.cr", "nome": "Rainier Morales", "dealer": "cdm", "programa": "liderazgo"},
+    {"email": "rodrigo.miranda@rieder.com.py", "nome": "Rodrigo Miranda", "dealer": "rieder", "programa": "liderazgo"},
+    {"email": "jose.dolotovycz@rieder.com.py", "nome": "José Dolotovycz", "dealer": "rieder", "programa": "liderazgo"}
+  ]
+}
