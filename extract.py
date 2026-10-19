@@ -31,7 +31,11 @@ def get(path):
 def get_all(prefix):
     out, p = [], 0
     while True:
-        d = get(f'{prefix}{p}')
+        try:
+            d = get(f'{prefix}{p}')
+        except urllib.error.HTTPError as e:
+            if e.code == 404 and p > 0: break  # a API responde 404 na página além da última (total múltiplo de 25)
+            raise
         if not isinstance(d, list) or not d: break
         out += d
         if len(d) < 25: break
