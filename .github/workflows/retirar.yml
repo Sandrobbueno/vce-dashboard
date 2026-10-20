@@ -1,0 +1,29 @@
+name: Retirar alunos de um curso (Hotscool)
+on:
+  workflow_dispatch:
+    inputs:
+      lang: { required: true }
+      curso: { required: true }
+      programa: { required: true }
+permissions:
+  contents: write
+jobs:
+  retirar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Executar
+        env:
+          HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
+          HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
+        run: |
+          set -o pipefail
+          python3 retirar.py --lang "${{ inputs.lang }}" --curso "${{ inputs.curso }}" --programa "${{ inputs.programa }}" 2>&1 | tee acao.out
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "vce-dashboard bot"; git config user.email "actions@users.noreply.github.com"
+          git add acoes.log acao.out
+          git diff --cached --quiet || (git commit -m "Retirada de curso (${{ inputs.lang }} ${{ inputs.curso }})" && git push)
