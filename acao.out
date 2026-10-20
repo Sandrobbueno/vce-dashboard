@@ -1,6 +1,4 @@
-/home/runner/work/vce-dashboard/vce-dashboard/acao.py:48: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  linha = f'{datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")} UTC | {a.lang.upper()} | CADASTRO + MATRICULA | {a.nome} <{email}> | id_aluno {sid} | curso {a.curso} | código {a.codigo} | ' + ' | '.join(resultado) + ' | pedido do Sandro no chat | e-mail de boas-vindas NÃO enviado\n'
-external_code: 200 [{"id": 699503, "email": "jose.vianna@tracbel.com.br", "codigo_externo": null, "cursos_matriculados": [{"id_curso": 21427, "titulo_curso": "Liderança Lean", "id_turma": null, "turma": null}], "trilhas": null}]
-report: 200 ok
-2026-10-20 10:27 UTC | PT | CADASTRO + MATRICULA | Jose Roberto Corazza Costa Vianna <jose.vianna@tracbel.com.br> | id_aluno 699503 | curso 21427 | código LID-BR-019 | já existia (id 699503); cadastro não alterado | verificação posterior | conferência: curso aparece no relatório do aluno | categorização: Tracbel / VCE / Liderança Lean | pedido do Sandro no chat | e-mail de boas-vindas NÃO enviado
+2026-10-20 13:35 UTC | PT | RETIRADA DO CURSO 21427 | programa especialistas | alvo 42 | retirados 42 (confirmados fora do relatório: 42) | pulados 0 | falhas 0 | pedido do Sandro no chat (matrícula indevida)
 
+pulados: []
+falhas: []
