@@ -6,7 +6,7 @@ Telefone vai à plataforma mas nunca ao log nem ao repositório."""
 import json, os, sys, pathlib, argparse, datetime, time, urllib.request, urllib.error
 ap = argparse.ArgumentParser()
 for a in ('lang','nome','email','unidade','departamento','cargo','codigo','curso','programa','dealer'): ap.add_argument('--'+a, required=True)
-ap.add_argument('--verificar', default=''); ap.add_argument('--ddd', default=''); ap.add_argument('--telefone', default=''); ap.add_argument('--senha', default='123456')
+ap.add_argument('--verificar', default=''); ap.add_argument('--boasvindas', default='1'); ap.add_argument('--ddd', default=''); ap.add_argument('--telefone', default=''); ap.add_argument('--senha', default='123456')
 a = ap.parse_args()
 BASE = pathlib.Path(__file__).parent; API = 'https://api.hotscool.com/v1/'
 key = os.environ[f'HOTSCOOL_KEY_{a.lang.upper()}']
@@ -25,7 +25,7 @@ if ja:
     resultado.append(f'já existia (id {ja[0]["id"]}); cadastro não alterado')
 else:
     b = dict(nome=a.nome, email=email, id_pais=1, id_unidade=int(a.unidade), id_departamento=int(a.departamento), id_cargo=int(a.cargo),
-             codigo_externo=a.codigo, senha=a.senha, enviar_email_notificacao=0)
+             codigo_externo=a.codigo, senha=a.senha, enviar_email_notificacao=1 if a.boasvindas == '1' else 0)
     if a.ddd and a.telefone: b.update(ddd=int(a.ddd), telefone=int(a.telefone))
     s, d = call('POST', 'leads/enrollment/groups', b); resultado.append(f'cadastro HTTP {s}')
     if s != 200: print(resultado, d); sys.exit(1)
@@ -35,7 +35,7 @@ sid = ja[0]['id']
 if a.verificar:
     resultado.append('verificação posterior')
 else:
-    s, d = call('POST', 'students/enrollment', {'nome': a.nome, 'email': email, 'id_curso': int(a.curso), 'id_pais': 1}); resultado.append(f'matrícula HTTP {s}')
+    s, d = call('POST', 'students/enrollment', {'nome': a.nome, 'email': email, 'id_curso': int(a.curso), 'id_pais': 1, 'enviar_email_notificacao': 1 if a.boasvindas == '1' else 0}); resultado.append(f'matrícula HTTP {s}')
     if s != 200: print(resultado, d); sys.exit(1)
     time.sleep(20)
 se, de = call('GET', f'students/external_code/{a.codigo}')
@@ -45,7 +45,7 @@ ok = s == 200 and isinstance(rep, dict) and (rep.get('relatorio_curso') or {}).g
 resultado.append('conferência: ' + ('curso aparece no relatório do aluno' if ok else f'FALHOU (HTTP {s})'))
 cat = (ja[0].get('categorizacao') or {})
 resultado.append(f'categorização: {cat.get("nome_unidade")} / {cat.get("nome_departamento")} / {cat.get("nome_cargo")}')
-linha = f'{datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")} UTC | {a.lang.upper()} | CADASTRO + MATRICULA | {a.nome} <{email}> | id_aluno {sid} | curso {a.curso} | código {a.codigo} | ' + ' | '.join(resultado) + ' | pedido do Sandro no chat | e-mail de boas-vindas NÃO enviado\n'
+linha = f'{datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")} UTC | {a.lang.upper()} | CADASTRO + MATRICULA | {a.nome} <{email}> | id_aluno {sid} | curso {a.curso} | código {a.codigo} | ' + ' | '.join(resultado) + ' | pedido do Sandro no chat | boas-vindas ' + ('solicitado à plataforma (só vale para cadastro novo)' if a.boasvindas == '1' else 'desligado') + '\n'
 (BASE / 'acoes.log').open('a', encoding='utf-8').write(linha); print(linha)
 cp = BASE / f'config_{a.lang}.json'; cfg = json.loads(cp.read_text(encoding='utf-8'))
 if email not in {p['email'].lower() for p in cfg['roster']}:
