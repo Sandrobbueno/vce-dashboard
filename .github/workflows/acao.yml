@@ -28,6 +28,7 @@ jobs:
           HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
           HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
         run: |
+          set -o pipefail
           python3 acao.py --lang "${{ inputs.lang }}" --nome "${{ inputs.nome }}" --email "${{ inputs.email }}" \
             --unidade "${{ inputs.unidade }}" --departamento "${{ inputs.departamento }}" --cargo "${{ inputs.cargo }}" \
             --codigo "${{ inputs.codigo }}" --curso "${{ inputs.curso }}" --programa "${{ inputs.programa }}" --dealer "${{ inputs.dealer }}" \
@@ -36,5 +37,5 @@ jobs:
         if: always()
         run: |
           git config user.name "vce-dashboard bot"; git config user.email "actions@users.noreply.github.com"
-          git add acoes.log config_*.json
+          git add acoes.log config_*.json acao.out
           git diff --cached --quiet || (git commit -m "Ação administrativa: ${{ inputs.email }}" && git push)
