@@ -6,7 +6,7 @@ Telefone vai à plataforma mas nunca ao log nem ao repositório."""
 import json, os, sys, pathlib, argparse, datetime, time, urllib.request, urllib.error
 ap = argparse.ArgumentParser()
 for a in ('lang','nome','email','unidade','departamento','cargo','codigo','curso','programa','dealer'): ap.add_argument('--'+a, required=True)
-ap.add_argument('--ddd', default=''); ap.add_argument('--telefone', default=''); ap.add_argument('--senha', default='123456')
+ap.add_argument('--verificar', default=''); ap.add_argument('--ddd', default=''); ap.add_argument('--telefone', default=''); ap.add_argument('--senha', default='123456')
 a = ap.parse_args()
 BASE = pathlib.Path(__file__).parent; API = 'https://api.hotscool.com/v1/'
 key = os.environ[f'HOTSCOOL_KEY_{a.lang.upper()}']
@@ -32,9 +32,12 @@ else:
     time.sleep(3); ja = find()
     if not ja: print('cadastro não apareceu na busca'); sys.exit(1)
 sid = ja[0]['id']
-s, d = call('POST', 'students/enrollment', {'nome': a.nome, 'email': email, 'id_curso': int(a.curso), 'id_pais': 1}); resultado.append(f'matrícula HTTP {s}')
-if s != 200: print(resultado, d); sys.exit(1)
-time.sleep(8)
+if a.verificar:
+    resultado.append('verificação posterior')
+else:
+    s, d = call('POST', 'students/enrollment', {'nome': a.nome, 'email': email, 'id_curso': int(a.curso), 'id_pais': 1}); resultado.append(f'matrícula HTTP {s}')
+    if s != 200: print(resultado, d); sys.exit(1)
+    time.sleep(20)
 s, rep = call('GET', f'students/{sid}/report/course/{a.curso}')
 ok = s == 200 and isinstance(rep, dict) and (rep.get('relatorio_curso') or {}).get('id_curso') == int(a.curso)
 resultado.append('conferência: ' + ('curso aparece no relatório do aluno' if ok else f'FALHOU (HTTP {s})'))

@@ -12,6 +12,7 @@ on:
       curso: { description: 'id do curso', required: true }
       programa: { description: 'chave do programa no config (ex lideranca)', required: true }
       dealer: { description: 'chave do dealer no config (ex tracbel)', required: true }
+      verificar: { required: false, default: '' }
       ddd: { required: false, default: '' }
       telefone: { required: false, default: '' }
 permissions:
@@ -32,7 +33,7 @@ jobs:
           python3 acao.py --lang "${{ inputs.lang }}" --nome "${{ inputs.nome }}" --email "${{ inputs.email }}" \
             --unidade "${{ inputs.unidade }}" --departamento "${{ inputs.departamento }}" --cargo "${{ inputs.cargo }}" \
             --codigo "${{ inputs.codigo }}" --curso "${{ inputs.curso }}" --programa "${{ inputs.programa }}" --dealer "${{ inputs.dealer }}" \
-            --ddd "${{ inputs.ddd }}" --telefone "${{ inputs.telefone }}" 2>&1 | tee acao.out
+            --verificar "${{ inputs.verificar }}" --ddd "${{ inputs.ddd }}" --telefone "${{ inputs.telefone }}" 2>&1 | tee acao.out
       - name: Commit do registro
         if: always()
         run: |
