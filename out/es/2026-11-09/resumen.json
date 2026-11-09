@@ -1,0 +1,208 @@
+{
+ "fecha": "2026-11-09",
+ "semana": 8,
+ "inicio": "2026-09-18",
+ "dealers": {
+  "cdm": {
+   "expertos": {
+    "inscritos": 19,
+    "registrados": 19,
+    "con_acceso": 17,
+    "iniciaron": 17,
+    "concluyeron": 2,
+    "avance_prom": 36,
+    "certificados": 23,
+    "serie": [
+     [
+      "2026-10-14",
+      18
+     ],
+     [
+      "2026-10-16",
+      19
+     ],
+     [
+      "2026-10-19",
+      20
+     ],
+     [
+      "2026-10-26",
+      24
+     ],
+     [
+      "2026-11-02",
+      27
+     ],
+     [
+      "2026-11-09",
+      36
+     ]
+    ]
+   },
+   "liderazgo": {
+    "inscritos": 12,
+    "registrados": 12,
+    "con_acceso": 10,
+    "iniciaron": 9,
+    "concluyeron": 0,
+    "avance_prom": 27,
+    "certificados": 0,
+    "serie": [
+     [
+      "2026-10-14",
+      6
+     ],
+     [
+      "2026-10-16",
+      7
+     ],
+     [
+      "2026-10-19",
+      7
+     ],
+     [
+      "2026-10-26",
+      13
+     ],
+     [
+      "2026-11-02",
+      21
+     ],
+     [
+      "2026-11-09",
+      27
+     ]
+    ]
+   }
+  },
+  "ascendum": {
+   "expertos": {
+    "inscritos": 19,
+    "registrados": 19,
+    "con_acceso": 13,
+    "iniciaron": 11,
+    "concluyeron": 1,
+    "avance_prom": 8,
+    "certificados": 5,
+    "serie": [
+     [
+      "2026-10-14",
+      1
+     ],
+     [
+      "2026-10-16",
+      1
+     ],
+     [
+      "2026-10-19",
+      2
+     ],
+     [
+      "2026-10-26",
+      8
+     ],
+     [
+      "2026-11-02",
+      8
+     ],
+     [
+      "2026-11-09",
+      8
+     ]
+    ]
+   }
+  },
+  "rieder": {
+   "expertos": {
+    "inscritos": 10,
+    "registrados": 10,
+    "con_acceso": 9,
+    "iniciaron": 9,
+    "concluyeron": 2,
+    "avance_prom": 60,
+    "certificados": 21,
+    "serie": [
+     [
+      "2026-10-14",
+      1
+     ],
+     [
+      "2026-10-16",
+      1
+     ],
+     [
+      "2026-10-19",
+      1
+     ],
+     [
+      "2026-10-26",
+      24
+     ],
+     [
+      "2026-11-02",
+      50
+     ],
+     [
+      "2026-11-09",
+      60
+     ]
+    ]
+   },
+   "liderazgo": {
+    "inscritos": 2,
+    "registrados": 2,
+    "con_acceso": 2,
+    "iniciaron": 2,
+    "concluyeron": 0,
+    "avance_prom": 24,
+    "certificados": 0,
+    "serie": [
+     [
+      "2026-10-14",
+      0
+     ],
+     [
+      "2026-10-16",
+      0
+     ],
+     [
+      "2026-10-19",
+      0
+     ],
+     [
+      "2026-10-26",
+      0
+     ],
+     [
+      "2026-11-02",
+      8
+     ],
+     [
+      "2026-11-09",
+      24
+     ]
+    ]
+   }
+  }
+ },
+ "red": {
+  "expertos": {
+   "inscritos": 48,
+   "registrados": 48,
+   "con_acceso": 39,
+   "iniciaron": 37,
+   "concluyeron": 5,
+   "avance_prom": 30,
+   "certificados": 49
+  },
+  "liderazgo": {
+   "inscritos": 14,
+   "registrados": 14,
+   "con_acceso": 12,
+   "iniciaron": 11,
+   "concluyeron": 0,
+   "avance_prom": 27,
+   "certificados": 0
+  }
+ }
+}
