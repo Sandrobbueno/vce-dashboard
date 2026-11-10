@@ -1,1 +1,15 @@
-NÃO ENCONTRADO: wcortes@cdm.co.cr
+id 686499 | nome Lindsay Morales | e-mail lmorales@cdm.co.cr
+campos de acesso (lead): {}
+GET students/{id}: 200 {}
+spec v1/api-docs/swagger.json 200 
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="
+spec v1/api-docs.json 403 
+spec v1/swagger.json 403 
+spec api-docs/swagger.json 403 
+spec swagger.json 403 
+spec v1/api-docs/ 200 
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="
