@@ -173,10 +173,11 @@
       "programa": "expertos"
     },
     {
-      "email": "lmorales@cdm.co.cr",
-      "nome": "Lindsay Morales",
+      "email": "wquiros@cdm.co.cr",
+      "nome": "Wilson Quiroz",
       "dealer": "cdm",
-      "programa": "expertos"
+      "programa": "expertos",
+      "nota": "substitui Lindsay Morales (saiu da CDM; troca informada em 10/11/2026)"
     },
     {
       "email": "emorales@cdm.co.cr",
@@ -408,16 +409,18 @@
       "programa": "liderazgo"
     },
     {
-      "email": "jvillalobos@cdm.co.cr",
-      "nome": "Jimena Villalobos",
+      "email": "cmora@cdm.co.cr",
+      "nome": "Carlos Mora",
       "dealer": "cdm",
-      "programa": "liderazgo"
+      "programa": "liderazgo",
+      "nota": "substitui Jimena Villalobos (saiu da CDM; troca informada em 10/11/2026)"
     },
     {
-      "email": "jcnavarro@cdm.co.cr",
-      "nome": "Juan Carlos Navarro",
+      "email": "wcortes@cdm.co.cr",
+      "nome": "William Cortez",
       "dealer": "cdm",
-      "programa": "liderazgo"
+      "programa": "liderazgo",
+      "nota": "substitui Juan Carlos Navarro (saiu da CDM; troca informada em 10/11/2026)"
     },
     {
       "email": "hvictor@cdm.co.cr",
