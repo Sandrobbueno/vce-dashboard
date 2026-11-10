@@ -36,7 +36,12 @@ if not a.aplicar:
     print('swagger-ui-init.js', s, len(d) if isinstance(d, str) else type(d).__name__)
     if s == 200 and isinstance(d, str):
         for m in re.finditer(r'block-access|students/access', d):
-            i = m.start(); print('TRECHO:', re.sub(r'\s+', ' ', d[max(0, i-200):i+1600])); break
+            i = m.start()
+            for mm in re.finditer(r'"in": "path"|"name": "status"|Block|block|status', d[i:i+9000]):
+                pass
+            seg = d[i:i+9000]; j = seg.find('"parameters"')
+            print('TRECHO', d[i:i+60].replace('\n', ' '), '| parametros:', re.sub(r'\s+', ' ', seg[j:j+1500]) if j >= 0 else 'sem bloco parameters')
+            print('TRECHO descricoes:', re.findall(r'"description": "([^"]{0,200})"', seg)[:12])
     for u in ('v1/api-docs/swagger.json', 'v1/api-docs.json', 'v1/swagger.json', 'api-docs/swagger.json', 'swagger.json', 'v1/api-docs/'):
         s, d = call('GET', u, root=ROOT, auth=False)
         if s == 200 and isinstance(d, dict) and 'paths' in d:
