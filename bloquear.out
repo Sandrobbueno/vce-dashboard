@@ -1,7 +1,7 @@
 id 686499 | nome Lindsay Morales | e-mail lmorales@cdm.co.cr
 campos de acesso (lead): {}
 GET students/{id}: 200 {}
-swagger-ui-init.js 200 371662
+swagger-ui-init.js 200 371663
 TRECHO: ref": "#/components/schemas/Alunos" } } }, "description": "Alunos Object", "required": true } } }, "/v1/students/access/{student_id}/{course_id}/{status}": { "put": { "deprecated": false, "summary": "Endpoint to block/unblock the access of a Student into a course", "security": [], "responses": { "200": { "description": "Success response", "content": { "application/json": { "schema": { "type": "object" }, "examples": { "example1": { "summary": "example success response", "value": { "message": "Acesso modificado com sucesso." } } } } } }, "401": { "description": "Unauthorized", "content": { "application/json": { "schema": { "type": "object" }, "examples": { "example2": { "summary": "example error response", "value": { "message": "Unauthorized" } } } } } }, "403": { "description": "Forbiden", "content": { "application/json": { "schema": { "type": "object" }, "examples": { 
 spec v1/api-docs/swagger.json 200 
 <!-- HTML for static distribution bundle build -->
