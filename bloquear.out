@@ -1,22 +1,7 @@
 id 686499 | nome Lindsay Morales | e-mail lmorales@cdm.co.cr
 campos de acesso (lead): {}
 GET students/{id}: 200 {}
-swagger-ui-init.js 200 371662
-TRECHO students/access/{student_id}/{course_id}/{status}": {        | parametros: "parameters": [ { "name": "x-access-token", "in": "header", "description": "(API TOKEN)", "required": true, "deprecated": false, "schema": { "type": "string" } }, { "name": "status", "in": "path", "description": "(status => 1:active 2:blocked)", "required": true, "deprecated": false, "schema": { "type": "number" } }, { "name": "course_id", "in": "path", "description": "(course id)", "required": true, "deprecated": false, "schema": { "type": "number" } }, { "name": "student_id", "in": "path", "description": "(student id)", "required": true, "deprecated": false, "schema": { "type": "number" } } ], "tags": [ "Students" ] } }, "/v1/students/block-access/all/{student_id}/{status}": { "put": { "deprecated": false, "summary": "Endpoint to block/unblock the access of a Student across all contents of the School", "security": [], "respo
-TRECHO descricoes: ['Success response', 'Unauthorized', 'Forbiden', 'Not Found', 'Internal Server Error', '(API TOKEN)', '(status => 1:active 2:blocked)', '(course id)', '(student id)', 'Success response', 'Unauthorized', 'Forbiden']
-TRECHO block-access/all/{student_id}/{status}": {         "put": {  | parametros: "parameters": [ { "name": "x-access-token", "in": "header", "description": "(API TOKEN)", "required": true, "deprecated": false, "schema": { "type": "string" } }, { "name": "status", "in": "path", "description": "(status => 1:active 2:blocked)", "required": true, "deprecated": false, "schema": { "type": "number" } }, { "name": "student_id", "in": "path", "description": "(student id)", "required": true, "deprecated": false, "schema": { "type": "number" } } ], "tags": [ "Students" ] } }, "/v1/students/block-access/school/{student_id}/{status}": { "put": { "deprecated": false, "summary": "Endpoint to block/unblock the access of a Student to the School", "security": [], "responses": { "200": { "description": "Success response", "content": { "application/json": { "schema": { "type": "object" }, "examples": { "example1":
-TRECHO descricoes: ['Success response', 'Unauthorized', 'Forbiden', 'Not Found', 'Internal Server Error', '(API TOKEN)', '(status => 1:active 2:blocked)', '(student id)', 'Success response', 'Unauthorized', 'Forbiden', 'Not Found']
-TRECHO block-access/school/{student_id}/{status}": {         "put": | parametros: "parameters": [ { "name": "x-access-token", "in": "header", "description": "(API TOKEN)", "required": true, "deprecated": false, "schema": { "type": "string" } }, { "name": "student_id", "in": "path", "description": "(student id)", "required": true, "deprecated": false, "schema": { "type": "number" } }, { "name": "status", "in": "path", "description": "(status => 1:active/unblocked 2:blocked)", "required": true, "deprecated": false, "schema": { "type": "number" } } ], "tags": [ "Students" ] } }, "/v1/students/withdraw/{student_id}/{course_id}": { "delete": { "deprecated": false, "summary": "Endpoint to withdraw a Student from a course", "security": [], "responses": { "200": { "description": "Success response", "content": { "application/json": { "schema": { "type": "object" }, "examples": { "example1": { 
-TRECHO descricoes: ['Success response', 'Unauthorized', 'Forbiden', 'Not Found', 'Internal Server Error', '(API TOKEN)', '(student id)', '(status => 1:active/unblocked 2:blocked)', 'Success response', 'Unauthorized', 'Forbiden', 'Not Found']
-spec v1/api-docs/swagger.json 200 
-<!-- HTML for static distribution bundle build -->
-<!DOCTYPE html>
-<html lang="
-spec v1/api-docs.json 403 
-spec v1/swagger.json 403 
-spec api-docs/swagger.json 403 
-spec swagger.json 403 
-spec v1/api-docs/ 200 
-<!-- HTML for static distribution bundle build -->
-<!DOCTYPE html>
-<html lang="
+PUT block-access: 200 {'message': 'Acesso do aluno modificado com sucesso.'}
+depois: {}
+2026-11-10 13:59 UTC | ES | BLOQUEIO DE ACESSO À ESCOLA | Lindsay Morales <lmorales@cdm.co.cr> | id_aluno 686499 | status enviado 2 | HTTP 200 | campos de acesso depois: {} | pedido do Sandro no chat (saiu da empresa); cadastro e progresso mantidos
+
