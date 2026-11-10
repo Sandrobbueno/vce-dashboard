@@ -1,0 +1,31 @@
+name: Bloquear acesso de aluno (Hotscool)
+on:
+  workflow_dispatch:
+    inputs:
+      lang: { description: 'Escola: es ou pt', required: true }
+      email: { required: true }
+      nome: { required: false, default: '' }
+      status: { description: 'valor do status do endpoint block-access (vazio = só inspecionar)', required: false, default: '' }
+      aplicar: { description: 'sim para executar o bloqueio', required: false, default: '' }
+permissions:
+  contents: write
+jobs:
+  bloquear:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Executar
+        env:
+          HOTSCOOL_KEY_ES: ${{ secrets.HOTSCOOL_KEY_ES }}
+          HOTSCOOL_KEY_PT: ${{ secrets.HOTSCOOL_KEY_PT }}
+        run: |
+          set -o pipefail
+          python3 bloquear.py --lang "${{ inputs.lang }}" --email "${{ inputs.email }}" --nome "${{ inputs.nome }}" --status "${{ inputs.status }}" --aplicar "${{ inputs.aplicar }}" 2>&1 | tee bloquear.out
+      - name: Commit do registro
+        if: always()
+        run: |
+          git config user.name "vce-dashboard bot"; git config user.email "actions@users.noreply.github.com"
+          git add acoes.log bloquear.out
+          git diff --cached --quiet || (git commit -m "Bloqueio/inspeção: ${{ inputs.email }}" && git pull --rebase -q && git push)
