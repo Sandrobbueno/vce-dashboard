@@ -28,9 +28,12 @@ else:
              codigo_externo=a.codigo, senha=a.senha, enviar_email_notificacao=1 if a.boasvindas == '1' else 0)
     if a.ddd and a.telefone: b.update(ddd=int(a.ddd), telefone=int(a.telefone))
     s, d = call('POST', 'leads/enrollment/groups', b); resultado.append(f'cadastro HTTP {s}')
+    print('resposta do cadastro:', s, json.dumps(d, ensure_ascii=False)[:600] if not isinstance(d, str) else d[:600])
     if s != 200: print(resultado, d); sys.exit(1)
-    time.sleep(3); ja = find()
-    if not ja: print('cadastro não apareceu na busca'); sys.exit(1)
+    for _ in range(12):
+        time.sleep(5); ja = find()
+        if ja: break
+    if not ja: print('cadastro não apareceu na busca (esperei 60 s)'); sys.exit(1)
 sid = ja[0]['id']
 if a.verificar:
     resultado.append('verificação posterior')
