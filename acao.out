@@ -1,1 +1,6 @@
-cadastro não apareceu na busca
+/home/runner/work/vce-dashboard/vce-dashboard/acao.py:51: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  linha = f'{datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")} UTC | {a.lang.upper()} | CADASTRO + MATRICULA | {a.nome} <{email}> | id_aluno {sid} | curso {a.curso} | código {a.codigo} | ' + ' | '.join(resultado) + ' | pedido do Sandro no chat | boas-vindas ' + ('solicitado à plataforma (só vale para cadastro novo)' if a.boasvindas == '1' else 'desligado') + '\n'
+external_code: 200 [{"id": 708069, "email": "wcortes@cdm.co.cr", "codigo_externo": null, "cursos_matriculados": [{"id_curso": 25023, "titulo_curso": "Liderazgo Lean", "id_turma": null, "turma": null}], "trilhas": null}]
+report: 200 ok
+2026-11-10 13:54 UTC | ES | CADASTRO + MATRICULA | William Cortez <wcortes@cdm.co.cr> | id_aluno 708069 | curso 25023 | código LID-HSP-015 | já existia (id 708069); cadastro não alterado | matrícula HTTP 200 | conferência: curso aparece no relatório do aluno | categorização: CDM / VCE / Lidenrança Lean | pedido do Sandro no chat | boas-vindas solicitado à plataforma (só vale para cadastro novo)
+
