@@ -32,6 +32,11 @@ sid = lst[0]['id']; print('id', sid, '| nome', lst[0].get('nome'), '| e-mail', l
 print('campos de acesso (lead):', json.dumps(campos_acesso(lst[0]), ensure_ascii=False))
 s, st = call('GET', f'students/{sid}'); print('GET students/{id}:', s, json.dumps(campos_acesso(st), ensure_ascii=False)[:500] if s == 200 else str(st)[:200])
 if not a.aplicar:
+    s, d = call('GET', 'v1/api-docs/swagger-ui-init.js', root=ROOT, auth=False)
+    print('swagger-ui-init.js', s, len(d) if isinstance(d, str) else type(d).__name__)
+    if s == 200 and isinstance(d, str):
+        for m in re.finditer(r'block-access|students/access', d):
+            i = m.start(); print('TRECHO:', re.sub(r'\s+', ' ', d[max(0, i-200):i+1600])); break
     for u in ('v1/api-docs/swagger.json', 'v1/api-docs.json', 'v1/swagger.json', 'api-docs/swagger.json', 'swagger.json', 'v1/api-docs/'):
         s, d = call('GET', u, root=ROOT, auth=False)
         if s == 200 and isinstance(d, dict) and 'paths' in d:
