@@ -1,7 +1,7 @@
-id 499241 | nome Juan Carlos Navarro | e-mail jcnavarro@cdm.co.cr
+id 448509 | nome Jimena Villalobos | e-mail jvillalobos@cdm.co.cr
 campos de acesso (lead): {}
 GET students/{id}: 200 {}
 PUT block-access: 200 {'message': 'Acesso do aluno modificado com sucesso.'}
 depois: {}
-2026-11-10 13:59 UTC | ES | BLOQUEIO DE ACESSO À ESCOLA | Juan Carlos Navarro <jcnavarro@cdm.co.cr> | id_aluno 499241 | status enviado 2 | HTTP 200 | campos de acesso depois: {} | pedido do Sandro no chat (saiu da empresa); cadastro e progresso mantidos
+2026-11-10 14:00 UTC | ES | BLOQUEIO DE ACESSO À ESCOLA | Jimena Villalobos <jvillalobos@cdm.co.cr> | id_aluno 448509 | status enviado 2 | HTTP 200 | campos de acesso depois: {} | pedido do Sandro no chat (saiu da empresa); cadastro e progresso mantidos
 
