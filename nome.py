@@ -39,7 +39,7 @@ if not a.aplicar:
     sys.exit(0)
 caminho = a.caminho.replace('{id}', str(sid))
 CAMPOS = ('codigo_externo', 'nome', 'email', 'ddd', 'telefone', 'id_pais')  # reenviados com o valor atual para o PUT não apagar nada
-corpo = {k: lst[0].get(k) for k in CAMPOS if lst[0].get(k) not in (None, '')}; corpo['nome'] = a.nome
+corpo = {k: lst[0].get(k) for k in CAMPOS if lst[0].get(k) not in (None, '')}; corpo.update(nome=a.nome, email=a.email.strip().lower(), id_pais=int(lst[0].get('id_pais') or 1))
 print('campos reenviados:', sorted(corpo))
 s, d = call(a.metodo, caminho, corpo); print(a.metodo, caminho, s, str(d)[:300])
 time.sleep(5); dep = (achar() or [{}])[0]; depois = dep.get('nome'); print('nome depois:', depois, '| e-mail depois:', dep.get('email'), '| código depois:', dep.get('codigo_externo'))
