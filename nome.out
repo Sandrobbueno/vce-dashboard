@@ -1,5 +1,6 @@
 id 692714 | nome atual: José Francisco | e-mail jose.francisco@gotemburgo.com.br
-PUT leads/692714 400 {"errors":[{"msg":"não pode ser nulo","param":"email","location":"body"},{"msg":"precisa ser um e-mail válido","param":"email","location":"body"},{"msg":"não pode ser nulo","param":"id_pais","location":"body"},{"msg":"Opção Inválida. 1=Brasil, 2=Estados Unidos","param":"id_pais","location":"body"}]}
-nome depois: José Francisco
+campos reenviados: ['ddd', 'email', 'id_pais', 'nome', 'telefone']
+PUT leads/692714 400 {"errors":[{"value":0,"msg":"apenas números de 11 a 99 são aceitos como DDD","param":"ddd","location":"body"},{"value":0,"msg":"O DDD precisa ter 2 caracteres numéricos","param":"ddd","location":"body"},{"value":0,"msg":"O Telefone precisa ter no mínimo 8 caracteres numéricos","param":"telefone","lo
+nome depois: José Francisco | e-mail depois: jose.francisco@gotemburgo.com.br | código depois: None
 2026-11-11 12:49 UTC | PT | CORREÇÃO DE NOME | <jose.francisco@gotemburgo.com.br> | id_aluno 692714 | "José Francisco" -> "José Francisco do Nascimento Silva" | PUT leads/{id} HTTP 400 | conferência: FALHOU (nome na busca: José Francisco) | pedido do Sandro no chat
 
