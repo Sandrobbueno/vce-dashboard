@@ -38,8 +38,11 @@ if not a.aplicar:
                 print('ENDPOINT', meth.upper(), p, '|', op.get('summary'), '| params', params, '| corpo', props[:25])
     sys.exit(0)
 caminho = a.caminho.replace('{id}', str(sid))
-s, d = call(a.metodo, caminho, {'nome': a.nome}); print(a.metodo, caminho, s, str(d)[:300])
-time.sleep(5); depois = (achar() or [{}])[0].get('nome'); print('nome depois:', depois)
-ok = s == 200 and depois == a.nome
+CAMPOS = ('codigo_externo', 'nome', 'email', 'ddd', 'telefone', 'id_pais')  # reenviados com o valor atual para o PUT não apagar nada
+corpo = {k: lst[0].get(k) for k in CAMPOS if lst[0].get(k) not in (None, '')}; corpo['nome'] = a.nome
+print('campos reenviados:', sorted(corpo))
+s, d = call(a.metodo, caminho, corpo); print(a.metodo, caminho, s, str(d)[:300])
+time.sleep(5); dep = (achar() or [{}])[0]; depois = dep.get('nome'); print('nome depois:', depois, '| e-mail depois:', dep.get('email'), '| código depois:', dep.get('codigo_externo'))
+ok = s == 200 and depois == a.nome and (dep.get('email') or '').lower() == a.email.strip().lower()
 linha = f'{datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC | {a.lang.upper()} | CORREÇÃO DE NOME | <{a.email.strip().lower()}> | id_aluno {sid} | "{lst[0].get("nome")}" -> "{a.nome}" | {a.metodo} {a.caminho} HTTP {s} | conferência: {"ok" if ok else "FALHOU (nome na busca: " + str(depois) + ")"} | pedido do Sandro no chat\n'
 (BASE / 'acoes.log').open('a', encoding='utf-8').write(linha); print(linha); sys.exit(0 if ok else 1)
