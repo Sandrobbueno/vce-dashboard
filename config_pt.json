@@ -433,9 +433,16 @@
     },
     {
       "email": "jose.francisco@gotemburgo.com.br",
-      "nome": "José Francisco",
+      "nome": "José Francisco do Nascimento Silva",
       "dealer": "gotemburgo",
       "programa": "lideranca"
+    },
+    {
+      "email": "wellington.santos@gotemburgo.com.br",
+      "nome": "Wellington Pereira Santos",
+      "dealer": "gotemburgo",
+      "programa": "lideranca",
+      "nota": "cadastro de 2025 (LIDLEAN018) com 41% no Liderança Lean; incluído na turma 2026 a pedido do Sandro em 11/11/2026"
     },
     {
       "email": "juliano.gomes@tracbel.com.br",
