@@ -10,8 +10,8 @@
     "con_acceso": 16,
     "iniciaron": 16,
     "concluyeron": 3,
-    "avance_prom": 37,
-    "certificados": 26,
+    "avance_prom": 38,
+    "certificados": 27,
     "serie": [
      [
       "2026-10-14",
@@ -39,7 +39,7 @@
      ],
      [
       "2026-11-16",
-      37
+      38
      ]
     ]
    },
@@ -213,7 +213,7 @@
    "iniciaron": 37,
    "concluyeron": 7,
    "avance_prom": 34,
-   "certificados": 56
+   "certificados": 57
   },
   "liderazgo": {
    "inscritos": 14,

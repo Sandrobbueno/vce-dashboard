@@ -45,7 +45,7 @@
     "con_acceso": 6,
     "iniciaron": 2,
     "concluyeron": 0,
-    "avance_prom": 7,
+    "avance_prom": 8,
     "certificados": 0,
     "serie": [
      [
@@ -70,7 +70,7 @@
      ],
      [
       "2026-11-16",
-      7
+      8
      ]
     ]
    }
@@ -116,9 +116,9 @@
     "registrados": 4,
     "con_acceso": 3,
     "iniciaron": 3,
-    "concluyeron": 0,
-    "avance_prom": 30,
-    "certificados": 0,
+    "concluyeron": 1,
+    "avance_prom": 36,
+    "certificados": 1,
     "serie": [
      [
       "2026-10-16",
@@ -142,7 +142,7 @@
      ],
      [
       "2026-11-16",
-      30
+      36
      ]
     ]
    }
@@ -154,7 +154,7 @@
     "con_acceso": 12,
     "iniciaron": 9,
     "concluyeron": 0,
-    "avance_prom": 8,
+    "avance_prom": 9,
     "certificados": 3,
     "serie": [
      [
@@ -179,7 +179,7 @@
      ],
      [
       "2026-11-16",
-      8
+      9
      ]
     ]
    },
@@ -272,9 +272,9 @@
    "registrados": 19,
    "con_acceso": 14,
    "iniciaron": 9,
-   "concluyeron": 0,
-   "avance_prom": 13,
-   "certificados": 0
+   "concluyeron": 1,
+   "avance_prom": 14,
+   "certificados": 1
   }
  }
 }
