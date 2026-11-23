@@ -2,8 +2,8 @@ name: Extração e dashboards semanais (Volvo CE)
 
 on:
   schedule:
-    # 07:30 America/Sao_Paulo (UTC-3) = 10:30 UTC, toda segunda. Brasil não tem horário de verão desde 2019.
-    - cron: '30 10 * * 1'
+    # 05:50 America/Sao_Paulo (UTC-3) = 08:50 UTC, toda segunda. Brasil não tem horário de verão desde 2019.
+    - cron: '50 8 * * 1'
   workflow_dispatch:
     inputs:
       langs:

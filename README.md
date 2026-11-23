@@ -1,6 +1,6 @@
 # vce-dashboard · Formação Lean Volvo CE (escolas ES e PT)
 
-Repositório privado da Lean Dealers. Toda segunda às 07:30 (Brasília) o GitHub Actions:
+Repositório privado da Lean Dealers. Toda segunda às 05:50 (Brasília) o GitHub Actions:
 1. testa o alcance de `api.hotscool.com`;
 2. para cada escola (`es` = dealers hispânicos, `pt` = dealers brasileiros), roda `extract.py --lang` (chaves nos segredos `HOTSCOOL_KEY_ES` / `HOTSCOOL_KEY_PT`) e grava `history/dump_<lang>_<data>.json`;
 3. roda `build.py --lang` e grava `out/<lang>/<data>/` (dashboard HTML e texto de e-mail por dealer, consolidado interno, `resumen.json`, `textos_email.txt`);

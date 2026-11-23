@@ -4,7 +4,7 @@ Fonte de verdade: repositório privado GitHub `Sandrobbueno/vce-dashboard` (desd
 
 ## Arquitetura (16/10/2026)
 A rede das tarefas agendadas do Claude bloqueia `api.hotscool.com` e a liberação feita no ambiente de nuvem "Default" não se aplica a elas (testado em 14 e 16/10). Por isso o trabalho é dividido:
-1. **GitHub Actions** (`.github/workflows/semanal.yml`), segunda 07:30 Brasília: testa a API, extrai, gera HTML/e-mail/PDF, passa pela guarda de confidencialidade e faz commit em `history/`, `out/` e `04_PDFs_Semanais/`. A chave da Hotscool fica no segredo `HOTSCOOL_KEY_ES` do repositório, nunca no código.
+1. **GitHub Actions** (`.github/workflows/semanal.yml`), segunda 05:50 Brasília: testa a API, extrai, gera HTML/e-mail/PDF, passa pela guarda de confidencialidade e faz commit em `history/`, `out/` e `04_PDFs_Semanais/`. A chave da Hotscool fica no segredo `HOTSCOOL_KEY_ES` do repositório, nunca no código.
 2. **Envio ao Dropbox pelo próprio Actions** (`dropbox_upload.py`): PDFs datados em `04_PDFs_Semanais/` e saídas em `03_Dashboard/` da pasta Turmas 2026. Autorização única via app do Dropbox (segredos no GitHub).
 3. **E-mail aos dealers: o Sandro envia à mão**, com o PDF anexo (decisão de 16/10/2026: o corpo em tabelas ficou poluído e o conector do Outlook não anexa arquivos). `out/<data>/<dealer>_email.html` tem o texto curto em espanhol para copiar.
 4. **Tarefa agendada do Claude**, segunda 07:51: confere se a rodada do dia existe, registra os números no doc do projeto e manda um resumo ao Sandro. Não chama a API nem envia e-mail.
