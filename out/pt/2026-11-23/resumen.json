@@ -1,0 +1,308 @@
+{
+ "fecha": "2026-11-23",
+ "semana": 8,
+ "inicio": "2026-10-01",
+ "dealers": {
+  "nors": {
+   "especialistas": {
+    "inscritos": 18,
+    "registrados": 18,
+    "con_acceso": 10,
+    "iniciaron": 3,
+    "concluyeron": 0,
+    "avance_prom": 4,
+    "certificados": 3,
+    "serie": [
+     [
+      "2026-10-16",
+      0
+     ],
+     [
+      "2026-10-19",
+      0
+     ],
+     [
+      "2026-10-26",
+      0
+     ],
+     [
+      "2026-11-02",
+      1
+     ],
+     [
+      "2026-11-09",
+      2
+     ],
+     [
+      "2026-11-16",
+      3
+     ],
+     [
+      "2026-11-23",
+      4
+     ]
+    ]
+   },
+   "lideranca": {
+    "inscritos": 7,
+    "registrados": 7,
+    "con_acceso": 6,
+    "iniciaron": 3,
+    "concluyeron": 0,
+    "avance_prom": 10,
+    "certificados": 0,
+    "serie": [
+     [
+      "2026-10-16",
+      0
+     ],
+     [
+      "2026-10-19",
+      0
+     ],
+     [
+      "2026-10-26",
+      0
+     ],
+     [
+      "2026-11-02",
+      0
+     ],
+     [
+      "2026-11-09",
+      2
+     ],
+     [
+      "2026-11-16",
+      8
+     ],
+     [
+      "2026-11-23",
+      10
+     ]
+    ]
+   }
+  },
+  "gotemburgo": {
+   "especialistas": {
+    "inscritos": 10,
+    "registrados": 10,
+    "con_acceso": 9,
+    "iniciaron": 9,
+    "concluyeron": 1,
+    "avance_prom": 28,
+    "certificados": 12,
+    "serie": [
+     [
+      "2026-10-16",
+      1
+     ],
+     [
+      "2026-10-19",
+      2
+     ],
+     [
+      "2026-10-26",
+      9
+     ],
+     [
+      "2026-11-02",
+      12
+     ],
+     [
+      "2026-11-09",
+      16
+     ],
+     [
+      "2026-11-16",
+      17
+     ],
+     [
+      "2026-11-23",
+      28
+     ]
+    ]
+   },
+   "lideranca": {
+    "inscritos": 4,
+    "registrados": 4,
+    "con_acceso": 4,
+    "iniciaron": 4,
+    "concluyeron": 1,
+    "avance_prom": 43,
+    "certificados": 1,
+    "serie": [
+     [
+      "2026-10-16",
+      14
+     ],
+     [
+      "2026-10-19",
+      14
+     ],
+     [
+      "2026-10-26",
+      14
+     ],
+     [
+      "2026-11-02",
+      14
+     ],
+     [
+      "2026-11-09",
+      14
+     ],
+     [
+      "2026-11-16",
+      36
+     ],
+     [
+      "2026-11-23",
+      43
+     ]
+    ]
+   }
+  },
+  "tracbel": {
+   "especialistas": {
+    "inscritos": 14,
+    "registrados": 14,
+    "con_acceso": 12,
+    "iniciaron": 9,
+    "concluyeron": 0,
+    "avance_prom": 10,
+    "certificados": 3,
+    "serie": [
+     [
+      "2026-10-16",
+      1
+     ],
+     [
+      "2026-10-19",
+      1
+     ],
+     [
+      "2026-10-26",
+      5
+     ],
+     [
+      "2026-11-02",
+      5
+     ],
+     [
+      "2026-11-09",
+      8
+     ],
+     [
+      "2026-11-16",
+      9
+     ],
+     [
+      "2026-11-23",
+      10
+     ]
+    ]
+   },
+   "lideranca": {
+    "inscritos": 3,
+    "registrados": 3,
+    "con_acceso": 3,
+    "iniciaron": 3,
+    "concluyeron": 0,
+    "avance_prom": 14,
+    "certificados": 0,
+    "serie": [
+     [
+      "2026-10-16",
+      2
+     ],
+     [
+      "2026-10-19",
+      2
+     ],
+     [
+      "2026-10-26",
+      5
+     ],
+     [
+      "2026-11-02",
+      8
+     ],
+     [
+      "2026-11-09",
+      10
+     ],
+     [
+      "2026-11-16",
+      14
+     ],
+     [
+      "2026-11-23",
+      14
+     ]
+    ]
+   }
+  },
+  "dinamica": {
+   "lideranca": {
+    "inscritos": 6,
+    "registrados": 5,
+    "con_acceso": 2,
+    "iniciaron": 1,
+    "concluyeron": 0,
+    "avance_prom": 7,
+    "certificados": 0,
+    "serie": [
+     [
+      "2026-10-16",
+      6
+     ],
+     [
+      "2026-10-19",
+      6
+     ],
+     [
+      "2026-10-26",
+      7
+     ],
+     [
+      "2026-11-02",
+      7
+     ],
+     [
+      "2026-11-09",
+      7
+     ],
+     [
+      "2026-11-16",
+      7
+     ],
+     [
+      "2026-11-23",
+      7
+     ]
+    ]
+   }
+  }
+ },
+ "red": {
+  "especialistas": {
+   "inscritos": 42,
+   "registrados": 42,
+   "con_acceso": 31,
+   "iniciaron": 21,
+   "concluyeron": 1,
+   "avance_prom": 12,
+   "certificados": 18
+  },
+  "lideranca": {
+   "inscritos": 20,
+   "registrados": 19,
+   "con_acceso": 15,
+   "iniciaron": 11,
+   "concluyeron": 1,
+   "avance_prom": 16,
+   "certificados": 1
+  }
+ }
+}
